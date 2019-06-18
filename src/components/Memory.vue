@@ -1,39 +1,28 @@
 
 
 <template>
-  <div class="hello">
-    <h1>{{ try1 }}</h1>
-    <p>Getting there....</p>
-    <ul id="cards">
-      <li v-for="(card, index) in this.cards" v-bind:key="index">{{ card.suit }}</li>
-    </ul>
-
-    <p>
-      '♠': 'black',
-      '♣': 'black',
-      '♦': 'red',
-      '♥': 'red',
-    </p>
-    <div class="title">{{this.cards2}}</div>
+  <div id="container">
+    <div id="card" v-for="card in this.cards" v-bind:key="card.id">
+      <Card :card="card"/>
+    </div>
   </div>
 </template>
 
 
 <script>
 import deck from "../data/deck.js";
-const cards2 = deck[0].suit;
+import Card from "./Card.vue";
 
 export default {
   name: "Memory",
-  props: {
-    try1: String
-  },
+  props: {},
   data() {
     return {
-      cards2: cards2,
-      cards: deck,
-      title: "Check me"
+      cards: deck
     };
+  },
+  components: {
+    Card
   }
 };
 </script>
@@ -44,9 +33,21 @@ h3 {
   margin: 40px 0 0;
 }
 ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
 }
+#container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #e8eef2;
+}
+
 li {
   display: inline-block;
   margin: 0 10px;

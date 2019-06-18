@@ -1,12 +1,10 @@
 <template>
   <div id="app" class="app">
-    <img class="logo" alt="Vue logo" src="./assets/logomark-color.svg">
-    <Memory try1="This is the new message"/>
+    <Memory/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import Memory from "./components/Memory.vue";
 
 export default {
