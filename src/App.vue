@@ -1,17 +1,18 @@
 <template>
   <div id="app" class="app">
     <img class="logo" alt="Vue logo" src="./assets/logomark-color.svg">
-    <HelloWorld msg="Welcome to Your Coding Challenge"/>
+    <Memory try1="This is the new message"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+import Memory from "./components/Memory.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Memory
   }
 };
 </script>
