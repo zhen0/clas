@@ -23,9 +23,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 3rem;
-}
-
-.logo {
-  height: 15rem;
+  background-color: #e8eef2;
 }
 </style>
