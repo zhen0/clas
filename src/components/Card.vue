@@ -4,7 +4,7 @@
   <div id="card">
     <p>{{ card.suit }}{{card.value}}</p>
 
-    <img :src="`${card.suit}`">
+    <img :src="this[card.suit]">
   </div>
 </template>
 
