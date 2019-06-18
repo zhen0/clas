@@ -1,38 +1,30 @@
 
 
 <template>
-  <div class="hello">
-    <h1>{{ try1 }}</h1>
-    <p>Getting there....</p>
-    <ul id="cards">
-      <li v-for="(card, index) in this.cards" v-bind:key="index">{{ card.suit }}</li>
-    </ul>
-
-    <p>
-      '♠': 'black',
-      '♣': 'black',
-      '♦': 'red',
-      '♥': 'red',
-    </p>
-    <div class="title">{{this.cards2}}</div>
+  <div id="container">
+    <div id="card" v-for="card in this.cards" v-bind:key="card.id">
+      <p>{{ card.suit }}{{card.value}}</p>
+      <p>
+        <img :src="`${card.suit}`">
+      </p>
+    </div>
   </div>
 </template>
 
 
 <script>
 import deck from "../data/deck.js";
-const cards2 = deck[0].suit;
 
 export default {
   name: "Memory",
-  props: {
-    try1: String
-  },
+  props: {},
   data() {
     return {
-      cards2: cards2,
-      cards: deck,
-      title: "Check me"
+      hearts:
+        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/heavy-black-heart_2764.png",
+      diamonds:
+        "https://previews.123rf.com/images/stockgiu/stockgiu1807/stockgiu180703240/105877705-doodle-diamonds-casino-game-card-symbol-vector-illustration.jpg",
+      cards: deck
     };
   }
 };
@@ -44,9 +36,37 @@ h3 {
   margin: 40px 0 0;
 }
 ul {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
 }
+#container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+#card {
+  background-color: white;
+  margin: 20px;
+  width: 350px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  font-family: "Playfair Display", serif;
+  box-shadow: 10px 10px 10px rgb(46, 46, 46);
+}
+img {
+  height: 200px;
+  width: 350px;
+}
+
 li {
   display: inline-block;
   margin: 0 10px;
