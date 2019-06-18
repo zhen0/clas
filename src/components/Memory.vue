@@ -3,10 +3,7 @@
 <template>
   <div id="container">
     <div id="card" v-for="card in this.cards" v-bind:key="card.id">
-      <p>{{ card.suit }}{{card.value}}</p>
-      <p>
-        <img :src="`${card.suit}`">
-      </p>
+      <Card :card="card"/>
     </div>
   </div>
 </template>
@@ -14,18 +11,18 @@
 
 <script>
 import deck from "../data/deck.js";
+import Card from "./Card.vue";
 
 export default {
   name: "Memory",
   props: {},
   data() {
     return {
-      hearts:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/heavy-black-heart_2764.png",
-      diamonds:
-        "https://previews.123rf.com/images/stockgiu/stockgiu1807/stockgiu180703240/105877705-doodle-diamonds-casino-game-card-symbol-vector-illustration.jpg",
       cards: deck
     };
+  },
+  components: {
+    Card
   }
 };
 </script>
@@ -45,26 +42,10 @@ ul {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-items: center;
-}
-
-#card {
-  background-color: white;
-  margin: 20px;
-  width: 350px;
-  height: 500px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: 15px;
-  font-family: "Playfair Display", serif;
-  box-shadow: 10px 10px 10px rgb(46, 46, 46);
-}
-img {
-  height: 200px;
-  width: 350px;
+  justify-content: space-evenly;
+  background-color: #e8eef2;
 }
 
 li {

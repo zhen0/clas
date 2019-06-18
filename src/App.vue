@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <Memory try1="This is the new message"/>
+    <Memory/>
   </div>
 </template>
 
