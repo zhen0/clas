@@ -3,7 +3,7 @@
 <template>
   <div>
     <button @click="shuffle">Shuffle Cards</button>
-    <div v-if="shuffled" id="container">
+    <div id="container">
       <div id="card" v-for="card in this.cards" v-bind:key="card.id">
         <Card :card="card"/>
       </div>
@@ -13,6 +13,7 @@
 
 
 <script>
+import Vue from "vue";
 import deck from "../data/deck.js";
 import Card from "./Card.vue";
 
@@ -21,19 +22,19 @@ export default {
   props: {},
   data() {
     return {
-      cards: deck,
-      shuffled: false
+      cards: deck
     };
+  },
+  created() {
+    this.shuffle();
   },
   methods: {
     shuffle() {
-      for (let i = 0; i < this.cards.length; i++) {
+      for (let i = this.cards.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
         let temp = this.cards[i];
-        this.cards[i] = this.cards[j];
-        this.cards[j] = temp;
-
-        this.shuffled = true;
+        Vue.set(this.cards, i, this.cards[j]);
+        Vue.set(this.cards, j, temp);
       }
     }
   },
