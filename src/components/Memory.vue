@@ -1,9 +1,12 @@
 
 
 <template>
-  <div id="container">
-    <div id="card" v-for="card in this.cards" v-bind:key="card.id">
-      <Card :card="card"/>
+  <div>
+    <button @click="shuffle">Shuffle Cards</button>
+    <div v-if="shuffled" id="container">
+      <div id="card" v-for="card in this.cards" v-bind:key="card.id">
+        <Card :card="card"/>
+      </div>
     </div>
   </div>
 </template>
@@ -18,8 +21,21 @@ export default {
   props: {},
   data() {
     return {
-      cards: deck
+      cards: deck,
+      shuffled: false
     };
+  },
+  methods: {
+    shuffle() {
+      for (let i = 0; i < this.cards.length; i++) {
+        let j = Math.floor(Math.random() * i);
+        let temp = this.cards[i];
+        this.cards[i] = this.cards[j];
+        this.cards[j] = temp;
+
+        this.shuffled = true;
+      }
+    }
   },
   components: {
     Card
