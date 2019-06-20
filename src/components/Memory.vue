@@ -22,7 +22,8 @@ export default {
   props: {},
   data() {
     return {
-      cards: deck
+      cards: deck,
+      shuffled: 0
     };
   },
   created() {
@@ -36,6 +37,7 @@ export default {
         Vue.set(this.cards, i, this.cards[j]);
         Vue.set(this.cards, j, temp);
       }
+      this.shuffled++;
     }
   },
   components: {
