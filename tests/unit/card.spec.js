@@ -9,7 +9,6 @@ describe("Cards.vue", () => {
         card
       }
     });
-    // card should be blank to begin with
     expect(wrapper.text()).toMatch("");
   });
   it("shows a value when turned", () => {
@@ -26,7 +25,5 @@ describe("Cards.vue", () => {
     expect(wrapper.vm.turned).toBe(true);
     // checks correct value is being rendered
     expect(wrapper.text()).toMatch(value);
-    // Needs review
-    // expect(wrapper.element).toMatchSnapshot();
   });
 });
