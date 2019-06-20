@@ -21,7 +21,6 @@ export const store = {
     this.state.selected.push(card);
   },
   checkMatch() {
-    console.log("selected in store", this.state.selected);
     let counter = 0;
     if (this.state.selected[0].value === this.state.selected[1].value) {
       counter++;
@@ -60,13 +59,7 @@ export const store = {
     if (counter > 1) {
       let won = [...this.state.selected];
       this.state.matched.push(won);
-      this.state.cards = this.state.cards.filter(
-        card =>
-          card.id !== this.state.selected[0].id &&
-          card.id !== this.state.selected[1].id
-      );
-      this.state.selected = [];
-      this.state.match = true;
+      setTimeout(boundRemoveCards, 3000);
     } else {
       this.state.selected = [];
       this.state.match = false;
@@ -80,12 +73,25 @@ export const store = {
       this.state.cards[j] = temp;
     }
   },
+
+  removeCards() {
+    this.state.cards = this.state.cards.filter(
+      card =>
+        card.id !== this.state.selected[0].id &&
+        card.id !== this.state.selected[1].id
+    );
+    this.state.selected = [];
+    this.state.match = true;
+  },
   redo() {
     this.state.cards = deck.map(card => ({
       ...card,
       turned: false,
       unturned: true
     }));
+
     this.shuffle();
   }
 };
+
+const boundRemoveCards = store.removeCards.bind(store);
