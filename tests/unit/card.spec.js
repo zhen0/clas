@@ -1,4 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
+
 import Card from "@/components/Card.vue";
 
 describe("Cards.vue", () => {
@@ -21,8 +22,6 @@ describe("Cards.vue", () => {
     });
     //makes sure card is turned so value can be read
     wrapper.setData({ turned: true, unturned: false });
-    // checks card turned
-    expect(wrapper.vm.turned).toBe(true);
     // checks correct value is being rendered
     expect(wrapper.text()).toMatch(value);
   });
