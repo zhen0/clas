@@ -3,13 +3,19 @@ import deck from "./data/deck.js";
 export const store = {
   state: {
     cards: deck.map(card => ({ ...card, turned: false, unturned: true })),
+    // cards: [
+    //   { id: 1, suit: "hearts", value: 3, turned: false, unturned: true },
+    //   { id: 2, suit: "diamonds", value: 3, turned: false, unturned: true }
+    // ],
     shuffled: 0,
     msg: "Choose a card",
+    successMsg: "Congratulations! You win.",
     counter: 0,
     selected: [],
     matched: [],
     match: false,
-    pairs: false
+    pairs: false,
+    stillPlaying: true
   },
   turnCards() {
     this.state.cards = this.state.cards.map(card => ({
@@ -61,7 +67,7 @@ export const store = {
       let won = [...this.state.selected];
       this.state.matched.push(won);
       this.state.match = true;
-      setTimeout(boundRemoveCards, 3000);
+      setTimeout(boundRemoveCards, 1000);
     } else {
       this.state.selected = [];
       this.state.match = false;
@@ -82,6 +88,9 @@ export const store = {
         card.id !== this.state.selected[0].id &&
         card.id !== this.state.selected[1].id
     );
+    this.state.cards.length > 1
+      ? (this.state.stillPlaying = true)
+      : (this.state.stillPlaying = false);
     this.state.selected = [];
   },
   redo() {
