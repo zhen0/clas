@@ -15,7 +15,6 @@
 
 
 <script>
-import Vue from "vue";
 import { store } from "../store.js";
 import Card from "./Card.vue";
 
