@@ -2,16 +2,24 @@ import { shallowMount } from "@vue/test-utils";
 import Card from "@/components/Card.vue";
 
 describe("Cards.vue", () => {
-  it("renders a card when passed", () => {
+  it("shows a blank card  to begin with", () => {
+    const card = { suit: "hearts", value: 12, id: 1 };
+    const wrapper = shallowMount(Card, {
+      propsData: {
+        card
+      }
+    });
+    // card should be blank to begin with
+    expect(wrapper.text()).toMatch("");
+  });
+  it("shows a value when turned", () => {
     const card = { suit: "hearts", value: 12, id: 1 };
     const value = card.value.toString();
     const wrapper = shallowMount(Card, {
       propsData: {
-        card,
-        value
+        card
       }
     });
-    expect(wrapper.is(Card)).toBe(true);
     //makes sure card is turned so value can be read
     wrapper.setData({ turned: true, unturned: false });
     // checks card turned
