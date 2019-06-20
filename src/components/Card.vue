@@ -24,8 +24,6 @@ export default {
   props: { card: Object },
   data() {
     return {
-      turned: false,
-      unturned: true,
       isChosen: this.card.suit === "chosen" ? true : false,
       storeState: store.state,
 
