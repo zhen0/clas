@@ -3,7 +3,7 @@
 <template>
   <div>
     <div v-if="card.unturned" @click="turn" id="card"></div>
-    <div v-if="card.turned" @click="turnBack" id="card">
+    <div v-if="card.turned" id="card">
       <p>{{card.value}}</p>
 
       <img :src="this[card.suit]">
@@ -38,12 +38,26 @@ export default {
   methods: {
     turn() {
       if (this.storeState.counter < 2) {
+        // console.log(
+        //   "store?",
+        //   this.storeState.counter,
+        //   this.storeState.selected
+        // );
         this.storeState.counter++;
         this.card.unturned = false;
         this.card.turned = true;
+        store.setSelected(this.card);
       } else {
-        this.storeState.msg = "Sorry, you can only turn two cards per turn.";
-        store.turnCards();
+        if (store.checkMatch()) {
+          this.storeState.msg = "Congratulations.  Those cards match";
+        } else {
+          this.storeState.msg = "Sorry, you can only turn two cards per turn.";
+          store.turnCards();
+          this.storeState.counter = 0;
+          setTimeout(() => {
+            this.storeState.msg = "";
+          }, 3000);
+        }
       }
     }
   }
