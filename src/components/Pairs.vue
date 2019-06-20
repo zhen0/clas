@@ -1,15 +1,14 @@
-
-
 <template>
-  <div>
-    <div v-if="card.unturned" @click="turn" id="card">
-      <p>{{card.value}}{{card.suit}}</p>
-      <p></p>
-    </div>
-    <div v-if="card.turned" id="card">
-      <p>{{card.value}}</p>
+  <div id="container">
+    <div id="card">
+      <p>{{pair[0].value}}</p>
 
-      <img :src="this[card.suit]">
+      <img :src="this[pair[0].suit]">
+    </div>
+    <div id="card">
+      <p>{{pair[1].value}}</p>
+
+      <img :src="this[pair[1].suit]">
     </div>
   </div>
 </template>
@@ -17,14 +16,12 @@
 
 <script>
 import { store } from "../store.js";
-import { setTimeout } from "timers";
+
 export default {
-  name: "Card",
-  props: { card: Object },
+  name: "Pairs",
+  props: { pair: Array },
   data() {
     return {
-      turned: false,
-      unturned: true,
       storeState: store.state,
 
       hearts:
@@ -38,45 +35,20 @@ export default {
       joker:
         "https://cdn1.iconfinder.com/data/icons/shadies-casino-gambling/65/Casino_gambling_cards_card_games_black_jack_poker_spades_hearts_diamonds_clubs_joker-512.png"
     };
-  },
-  methods: {
-    turn() {
-      this.storeState.counter++;
-      if (this.storeState.counter <= 2) {
-        this.card.unturned = false;
-        this.card.turned = true;
-        store.setSelected(this.card);
-      }
-      if (this.storeState.counter === 2) {
-        this.checkAndUpdate();
-      }
-      if (this.storeState.counter > 2) {
-        this.storeState.msg = "Select only two cards per turn!";
-        setTimeout(this.update, 1000);
-      }
-    },
-
-    async checkAndUpdate() {
-      await store.checkMatch();
-      if (this.storeState.match) {
-        this.storeState.msg = "Congratulations.  Those cards match";
-        setTimeout(this.update, 2000);
-      } else {
-        this.storeState.msg = "Sorry, no match.";
-        setTimeout(this.update, 2000);
-      }
-    },
-    update() {
-      this.storeState.counter = 0;
-      store.turnCards();
-      this.storeState.msg = "Choose a card";
-    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-shadow: 3px 3px 5px black;
+
+  align-items: center;
+}
 #card {
   background-color: white;
   margin: 5px;

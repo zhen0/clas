@@ -5,6 +5,12 @@
     <p>{{this.storeState.msg}}</p>
     <button @click="redo">Redo Game</button>
     <button @click="submit">Submit Cards</button>
+    <button @click="view">View/Hide My Pairs</button>
+    <div v-if="storeState.pairs" id="pairsOuter">
+      <div v-for="(pair, index) in storeState.matched" v-bind:key="index" id="pairsBox">
+        <Pairs :pair="pair"/>
+      </div>
+    </div>
     <div id="container">
       <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
         <Card :card="card"/>
@@ -17,7 +23,7 @@
 <script>
 import { store } from "../store.js";
 import Card from "./Card.vue";
-
+import Pairs from "./Pairs.vue";
 export default {
   name: "Memory",
   props: {},
@@ -26,10 +32,15 @@ export default {
       storeState: store.state
     };
   },
+
   created() {
     store.shuffle();
   },
   methods: {
+    view() {
+      this.storeState.pairs = !this.storeState.pairs;
+      console.log("pairs", this.storeState.pairs);
+    },
     redo() {
       store.redo();
     },
@@ -52,7 +63,8 @@ export default {
     }
   },
   components: {
-    Card
+    Card,
+    Pairs
   }
 };
 </script>
@@ -76,6 +88,18 @@ ul {
   align-items: center;
   justify-content: space-evenly;
   background-color: #e8eef2;
+}
+#pairsOuter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  align-items: flex-start;
+}
+#pairsBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 li {

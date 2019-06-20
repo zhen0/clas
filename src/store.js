@@ -8,7 +8,8 @@ export const store = {
     counter: 0,
     selected: [],
     matched: [],
-    match: false
+    match: false,
+    pairs: false
   },
   turnCards() {
     this.state.cards = this.state.cards.map(card => ({
@@ -59,6 +60,7 @@ export const store = {
     if (counter > 1) {
       let won = [...this.state.selected];
       this.state.matched.push(won);
+      this.state.match = true;
       setTimeout(boundRemoveCards, 3000);
     } else {
       this.state.selected = [];
@@ -81,16 +83,18 @@ export const store = {
         card.id !== this.state.selected[1].id
     );
     this.state.selected = [];
-    this.state.match = true;
   },
   redo() {
-    this.state.cards = deck.map(card => ({
-      ...card,
-      turned: false,
-      unturned: true
-    }));
-
-    this.shuffle();
+    (this.state = {
+      cards: deck.map(card => ({ ...card, turned: false, unturned: true })),
+      shuffled: 0,
+      msg: "Choose a card",
+      counter: 0,
+      selected: [],
+      matched: [],
+      match: false
+    }),
+      this.shuffle();
   }
 };
 
