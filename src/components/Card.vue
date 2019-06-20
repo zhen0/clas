@@ -4,7 +4,8 @@
   <div>
     <div v-if="card.unturned" @click="turn" id="card">
       <!-- <p>{{card.value}}{{card.suit}}</p> -->
-      <p></p>
+
+      <img id="blankImg" :src="this[card.status]">
     </div>
     <div v-if="card.turned" id="card">
       <p>{{card.value}}</p>
@@ -25,6 +26,7 @@ export default {
     return {
       turned: false,
       unturned: true,
+      isChosen: this.card.suit === "chosen" ? true : false,
       storeState: store.state,
 
       hearts:
@@ -36,7 +38,11 @@ export default {
       clubs:
         "https://cdn3.iconfinder.com/data/icons/game-icon-set/50/clubs-512.png",
       joker:
-        "https://cdn1.iconfinder.com/data/icons/shadies-casino-gambling/65/Casino_gambling_cards_card_games_black_jack_poker_spades_hearts_diamonds_clubs_joker-512.png"
+        "https://cdn1.iconfinder.com/data/icons/shadies-casino-gambling/65/Casino_gambling_cards_card_games_black_jack_poker_spades_hearts_diamonds_clubs_joker-512.png",
+      chosen:
+        "https://dictionary.cambridge.org/images/thumb/cross_noun_002_09265.jpg?version=4.0.82",
+      not:
+        "https://images.blogthings.com/thejapanesepatterntest/japanese-pattern-1.png"
     };
   },
   methods: {
@@ -86,10 +92,15 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: center;
   padding: 5px;
   font-family: "Playfair Display", serif;
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
+}
+#blankImg {
+  height: 90%;
+  width: 80%;
+  align-self: center;
 }
 img {
   height: 40px;

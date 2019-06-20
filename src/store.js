@@ -2,10 +2,29 @@ import deck from "./data/deck.js";
 
 export const store = {
   state: {
-    cards: deck.map(card => ({ ...card, turned: false, unturned: true })),
+    cards: deck.map(card => ({
+      ...card,
+      turned: false,
+      unturned: true,
+      status: "not"
+    })),
     // cards: [
-    //   { id: 1, suit: "hearts", value: 3, turned: false, unturned: true },
-    //   { id: 2, suit: "diamonds", value: 3, turned: false, unturned: true }
+    //   {
+    //     id: 1,
+    //     suit: "hearts",
+    //     value: 3,
+    //     turned: false,
+    //     unturned: true,
+    //     status: "not"
+    //   },
+    //   {
+    //     id: 2,
+    //     suit: "diamonds",
+    //     value: 3,
+    //     turned: false,
+    //     unturned: true,
+    //     status: "not"
+    //   }
     // ],
     shuffled: 0,
     msg: "Choose a card",
@@ -83,14 +102,20 @@ export const store = {
   },
 
   removeCards() {
-    this.state.cards = this.state.cards.filter(
-      card =>
-        card.id !== this.state.selected[0].id &&
-        card.id !== this.state.selected[1].id
-    );
-    this.state.cards.length > 1
-      ? (this.state.stillPlaying = true)
-      : (this.state.stillPlaying = false);
+    this.state.cards = this.state.cards.map(card => {
+      if (
+        card.id === this.state.selected[0].id ||
+        card.id === this.state.selected[1].id
+      ) {
+        card.status = "chosen";
+      }
+      return card;
+    });
+    let half = this.state.cards.length / 2;
+
+    this.state.matched.length === half
+      ? (this.state.stillPlaying = false)
+      : (this.state.stillPlaying = true);
     this.state.selected = [];
   },
   redo() {
