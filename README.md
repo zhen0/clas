@@ -96,3 +96,7 @@ npm run test:unit
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## deployment
+
+deployed on firebase at https://memory-201906.web.app/
