@@ -2,8 +2,8 @@
 
 <template>
   <div>
-    <div v-if="unturned" @click="turn" id="card"></div>
-    <div v-if="turned" @click="turnBack" id="card">
+    <div v-if="card.unturned" @click="turn" id="card"></div>
+    <div v-if="card.turned" @click="turnBack" id="card">
       <p>{{card.value}}</p>
 
       <img :src="this[card.suit]">
@@ -13,6 +13,7 @@
 
 
 <script>
+import { store } from "../store.js";
 export default {
   name: "Card",
   props: { card: Object },
@@ -20,7 +21,8 @@ export default {
     return {
       turned: false,
       unturned: true,
-      counter: 0,
+      storeState: store.state,
+
       hearts:
         "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/heavy-black-heart_2764.png",
       diamonds:
@@ -35,13 +37,14 @@ export default {
   },
   methods: {
     turn() {
-      this.counter++;
-      this.turned = true;
-      this.unturned = false;
-    },
-    turnBack() {
-      this.turned = false;
-      this.unturned = true;
+      if (this.storeState.counter < 2) {
+        this.storeState.counter++;
+        this.card.unturned = false;
+        this.card.turned = true;
+      } else {
+        this.storeState.msg = "Sorry, you can only turn two cards per turn.";
+        store.turnCards();
+      }
     }
   }
 };

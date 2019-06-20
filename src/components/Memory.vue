@@ -2,9 +2,10 @@
 
 <template>
   <div>
+    <p>{{this.storeState.msg}}</p>
     <button @click="shuffle">Shuffle Cards</button>
     <div id="container">
-      <div id="card" v-for="card in this.cards" v-bind:key="card.id">
+      <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
         <Card :card="card"/>
       </div>
     </div>
@@ -14,7 +15,7 @@
 
 <script>
 import Vue from "vue";
-import deck from "../data/deck.js";
+import { store } from "../store.js";
 import Card from "./Card.vue";
 
 export default {
@@ -22,8 +23,7 @@ export default {
   props: {},
   data() {
     return {
-      cards: deck,
-      shuffled: 0
+      storeState: store.state
     };
   },
   created() {
@@ -31,11 +31,11 @@ export default {
   },
   methods: {
     shuffle() {
-      for (let i = this.cards.length - 1; i > 0; i--) {
+      for (let i = this.storeState.cards.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
-        let temp = this.cards[i];
-        Vue.set(this.cards, i, this.cards[j]);
-        Vue.set(this.cards, j, temp);
+        let temp = this.storeState.cards[i];
+        Vue.set(this.storeState.cards, i, this.storeState.cards[j]);
+        Vue.set(this.storeState.cards, j, temp);
       }
       this.shuffled++;
     }
