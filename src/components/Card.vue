@@ -3,6 +3,9 @@
 <template>
   <div>
     <div v-if="card.unturned" @click="turn" id="card"></div>
+    <p>unturned : {{card.value}}</p>
+
+    <img :src="this[card.suit]">
     <div v-if="card.turned" id="card">
       <p>{{card.value}}</p>
 
@@ -14,6 +17,7 @@
 
 <script>
 import { store } from "../store.js";
+import { setTimeout } from "timers";
 export default {
   name: "Card",
   props: { card: Object },
@@ -37,28 +41,33 @@ export default {
   },
   methods: {
     turn() {
-      if (this.storeState.counter < 2) {
-        // console.log(
-        //   "store?",
-        //   this.storeState.counter,
-        //   this.storeState.selected
-        // );
-        this.storeState.counter++;
-        this.card.unturned = false;
-        this.card.turned = true;
-        store.setSelected(this.card);
-      } else {
-        if (store.checkMatch()) {
-          this.storeState.msg = "Congratulations.  Those cards match";
-        } else {
-          this.storeState.msg = "Sorry, you can only turn two cards per turn.";
-          store.turnCards();
-          this.storeState.counter = 0;
-          setTimeout(() => {
-            this.storeState.msg = "";
-          }, 3000);
-        }
+      this.storeState.counter++;
+      this.card.unturned = false;
+      this.card.turned = true;
+      store.setSelected(this.card);
+      if (this.storeState.counter === 2) {
+        this.checkAndUpdate();
       }
+      if (this.storeState.counter > 2) {
+        this.storeState.msg = "Select only two cards per turn!";
+        setTimeout(this.update, 1000);
+      }
+    },
+
+    async checkAndUpdate() {
+      await store.checkMatch();
+      if (this.storeState.match) {
+        this.storeState.msg = "Congratulations.  Those cards match";
+        setTimeout(this.update, 2000);
+      } else {
+        this.storeState.msg = "Sorry, no match.";
+        setTimeout(this.update, 2000);
+      }
+    },
+    update() {
+      this.storeState.counter = 0;
+      store.turnCards();
+      this.storeState.msg = "Choose a card";
     }
   }
 };

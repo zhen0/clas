@@ -4,12 +4,14 @@ export const store = {
   state: {
     cards: deck.map(card => ({ ...card, turned: false, unturned: true })),
     shuffled: 0,
-    msg: "",
+    msg: "Choose a card",
     counter: 0,
-    selected: []
+    selected: [],
+    matched: [],
+    match: false
   },
   turnCards() {
-    this.state.cards = deck.map(card => ({
+    this.state.cards = this.state.cards.map(card => ({
       ...card,
       turned: false,
       unturned: true
@@ -19,7 +21,7 @@ export const store = {
     this.state.selected.push(card);
   },
   checkMatch() {
-    console.log(this.state.selected);
+    console.log("selected in store", this.state.selected);
     let counter = 0;
     if (this.state.selected[0].value === this.state.selected[1].value) {
       counter++;
@@ -48,12 +50,34 @@ export const store = {
     ) {
       counter++;
     }
-    console.log("counter", counter);
-    this.state.selected = [];
+    if (
+      this.state.selected[0].suit === "joker" &&
+      this.state.selected[1].suit === "joker"
+    ) {
+      counter++;
+    }
+
     if (counter > 1) {
-      return true;
+      let won = [...this.state.selected];
+      this.state.matched.push(won);
+      this.state.cards = this.state.cards.filter(
+        card =>
+          card.id !== this.state.selected[0].id &&
+          card.id !== this.state.selected[1].id
+      );
+      this.state.selected = [];
+      this.state.match = true;
     } else {
-      return false;
+      this.state.selected = [];
+      this.state.match = false;
+    }
+  },
+  shuffle() {
+    for (let i = this.state.cards.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * i);
+      let temp = this.state.cards[i];
+      this.state.cards[i] = this.state.cards[j];
+      this.state.cards[j] = temp;
     }
   }
 };

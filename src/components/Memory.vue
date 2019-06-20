@@ -4,6 +4,7 @@
   <div>
     <p>{{this.storeState.msg}}</p>
     <button @click="shuffle">Shuffle Cards</button>
+    <button @click="submit">Submit Cards</button>
     <div id="container">
       <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
         <Card :card="card"/>
@@ -38,6 +39,23 @@ export default {
         Vue.set(this.storeState.cards, j, temp);
       }
       this.shuffled++;
+    },
+    submit() {
+      if (this.storeState.counter < 2) {
+        this.storeState.msg = "Please click on 2 cards before you submit";
+      } else {
+        if (this.storeState.match) {
+          this.storeState.msg = "Congratulations.  Those cards match";
+          this.storeState.counter = 0;
+        } else {
+          this.storeState.msg = "Sorry, not a match";
+          store.turnCards();
+          this.storeState.counter = 0;
+          setTimeout(() => {
+            this.storeState.msg = "Choose a card";
+          }, 3000);
+        }
+      }
     }
   },
   components: {
