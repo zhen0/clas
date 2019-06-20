@@ -79,5 +79,13 @@ export const store = {
       this.state.cards[i] = this.state.cards[j];
       this.state.cards[j] = temp;
     }
+  },
+  redo() {
+    this.state.cards = deck.map(card => ({
+      ...card,
+      turned: false,
+      unturned: true
+    }));
+    this.shuffle();
   }
 };

@@ -3,7 +3,7 @@
 <template>
   <div>
     <p>{{this.storeState.msg}}</p>
-    <button @click="shuffle">Shuffle Cards</button>
+    <button @click="redo">Redo Game</button>
     <button @click="submit">Submit Cards</button>
     <div id="container">
       <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
@@ -28,17 +28,11 @@ export default {
     };
   },
   created() {
-    this.shuffle();
+    store.shuffle();
   },
   methods: {
-    shuffle() {
-      for (let i = this.storeState.cards.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * i);
-        let temp = this.storeState.cards[i];
-        Vue.set(this.storeState.cards, i, this.storeState.cards[j]);
-        Vue.set(this.storeState.cards, j, temp);
-      }
-      this.shuffled++;
+    redo() {
+      store.redo();
     },
     submit() {
       if (this.storeState.counter < 2) {
