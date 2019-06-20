@@ -2,9 +2,19 @@
 
 <template>
   <div>
-    <button @click="shuffle">Shuffle Cards</button>
+    <p v-if="storeState.stillPlaying">{{this.storeState.msg}}</p>
+    <h1 v-else>{{this.storeState.successMsg}}</h1>
+    <p>
+      <button @click="submit">Submit Cards</button>
+      <button @click="view">View/Hide My Pairs</button>
+    </p>
+    <div v-if="storeState.pairs" id="pairsOuter">
+      <div v-for="(pair, index) in storeState.matched" v-bind:key="index" id="pairsBox">
+        <Pairs :pair="pair"/>
+      </div>
+    </div>
     <div id="container">
-      <div id="card" v-for="card in this.cards" v-bind:key="card.id">
+      <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
         <Card :card="card"/>
       </div>
     </div>
@@ -13,35 +23,49 @@
 
 
 <script>
-import Vue from "vue";
-import deck from "../data/deck.js";
+import { store } from "../store.js";
 import Card from "./Card.vue";
-
+import Pairs from "./Pairs.vue";
 export default {
   name: "Memory",
   props: {},
   data() {
     return {
-      cards: deck,
-      shuffled: 0
+      storeState: store.state
     };
   },
+
   created() {
-    this.shuffle();
+    store.shuffle();
   },
   methods: {
-    shuffle() {
-      for (let i = this.cards.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * i);
-        let temp = this.cards[i];
-        Vue.set(this.cards, i, this.cards[j]);
-        Vue.set(this.cards, j, temp);
+    view() {
+      this.storeState.pairs = !this.storeState.pairs;
+    },
+    redo() {
+      store.redo();
+    },
+    submit() {
+      if (this.storeState.counter < 2) {
+        this.storeState.msg = "Please click on 2 cards before you submit";
+      } else {
+        if (this.storeState.match) {
+          this.storeState.msg = "Congratulations.  Those cards match";
+          this.storeState.counter = 0;
+        } else {
+          this.storeState.msg = "Sorry, not a match";
+          store.turnCards();
+          this.storeState.counter = 0;
+          setTimeout(() => {
+            this.storeState.msg = "Choose a card";
+          }, 3000);
+        }
       }
-      this.shuffled++;
     }
   },
   components: {
-    Card
+    Card,
+    Pairs
   }
 };
 </script>
@@ -65,6 +89,18 @@ ul {
   align-items: center;
   justify-content: space-evenly;
   background-color: #e8eef2;
+}
+#pairsOuter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  align-items: flex-start;
+}
+#pairsBox {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 li {
