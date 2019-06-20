@@ -3,7 +3,7 @@
 <template>
   <div>
     <div v-if="card.unturned" @click="turn" id="card">
-      <p>{{card.value}}{{card.suit}}</p>
+      <!-- <p>{{card.value}}{{card.suit}}</p> -->
       <p></p>
     </div>
     <div v-if="card.turned" id="card">

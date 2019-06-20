@@ -5,7 +5,6 @@
     <p v-if="storeState.stillPlaying">{{this.storeState.msg}}</p>
     <h1 v-else>{{this.storeState.successMsg}}</h1>
     <p>
-      <button @click="redo">Redo Game</button>
       <button @click="submit">Submit Cards</button>
       <button @click="view">View/Hide My Pairs</button>
     </p>
@@ -42,7 +41,6 @@ export default {
   methods: {
     view() {
       this.storeState.pairs = !this.storeState.pairs;
-      console.log("pairs", this.storeState.pairs);
     },
     redo() {
       store.redo();

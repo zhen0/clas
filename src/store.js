@@ -94,16 +94,24 @@ export const store = {
     this.state.selected = [];
   },
   redo() {
-    (this.state = {
+    this.state = {
       cards: deck.map(card => ({ ...card, turned: false, unturned: true })),
-      shuffled: 0,
+      // cards: [
+      //   { id: 1, suit: "hearts", value: 3, turned: false, unturned: true },
+      //   { id: 2, suit: "diamonds", value: 3, turned: false, unturned: true }
+      // ],
+
       msg: "Choose a card",
+      successMsg: "Congratulations! You win.",
       counter: 0,
       selected: [],
       matched: [],
-      match: false
-    }),
-      this.shuffle();
+      match: false,
+      pairs: false,
+      stillPlaying: true
+    };
+    console.log(this.state);
+    this.shuffle();
   }
 };
 
