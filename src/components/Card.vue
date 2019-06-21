@@ -43,7 +43,6 @@ export default {
   },
   methods: {
     turn() {
-      console.log("counter", this.storeState.counter);
       this.storeState.counter++;
       if (this.storeState.counter <= 2) {
         this.card.unturned = false;
