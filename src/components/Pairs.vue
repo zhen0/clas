@@ -1,11 +1,11 @@
 <template>
   <div id="container">
-    <div id="card">
+    <div class="card">
       <p>{{pair[0].value}}</p>
 
       <img :src="this[pair[0].suit]">
     </div>
-    <div id="card">
+    <div class="card">
       <p>{{pair[1].value}}</p>
 
       <img :src="this[pair[1].suit]">
@@ -44,12 +44,8 @@ export default {
 #container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  box-shadow: 3px 3px 5px black;
-
-  align-items: center;
 }
-#card {
+.card {
   background-color: white;
   margin: 5px;
   width: 80px;
@@ -58,7 +54,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 5px;
   font-family: "Playfair Display", serif;
   box-shadow: 10px 10px 10px rgb(46, 46, 46);

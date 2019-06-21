@@ -87,9 +87,11 @@ export const store = {
       this.state.matched.push(won);
       this.state.match = true;
       setTimeout(boundRemoveCards, 1000);
+      return true;
     } else {
       this.state.selected = [];
       this.state.match = false;
+      return false;
     }
   },
   shuffle() {
@@ -135,7 +137,7 @@ export const store = {
       pairs: false,
       stillPlaying: true
     };
-    console.log(this.state);
+
     this.shuffle();
   }
 };

@@ -4,10 +4,10 @@
   <div>
     <p v-if="storeState.stillPlaying">{{this.storeState.msg}}</p>
     <h1 v-else>{{this.storeState.successMsg}}</h1>
-    <p>
-      <button @click="submit">Submit Cards</button>
-      <button @click="view">View/Hide My Pairs</button>
-    </p>
+
+    <button @click="submit">Submit Cards</button>
+    <button id="viewPairs" @click="view">View/Hide My Pairs</button>
+
     <div v-if="storeState.pairs" id="pairsOuter">
       <div v-for="(pair, index) in storeState.matched" v-bind:key="index" id="pairsBox">
         <Pairs :pair="pair"/>
