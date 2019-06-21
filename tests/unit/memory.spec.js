@@ -28,7 +28,7 @@ describe("Memory.vue", () => {
   });
   it("when show pairs button is clicked, matched pairs are show", () => {
     const wrapper = shallowMount(Memory);
-    wrapper.findAll("button").trigger("click");
+    wrapper.find("#viewPairs").trigger("click");
     expect(wrapper.find("#pairsOuter").exists()).toBe(true);
   });
 });

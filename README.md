@@ -100,3 +100,5 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## deployment
 
 deployed on firebase at https://memory-201906.web.app/
+make sure firebase cli tools are installed
+enter "firebase deploy" into terminal when in root of this project directory
