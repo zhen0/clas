@@ -44,10 +44,6 @@ export default {
 #container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  box-shadow: 3px 3px 5px black;
-
-  align-items: center;
 }
 #card {
   background-color: white;
@@ -58,7 +54,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 5px;
   font-family: "Playfair Display", serif;
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
