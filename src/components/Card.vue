@@ -6,9 +6,8 @@
       <img id="blankImg" :src="this[card.status]">
     </div>
     <div v-if="card.turned " id="card">
-      <p id="cardTop">{{card.value}}</p>
+      <p>{{card.value}}</p>
       <img id="symbolImg" :src="this[card.suit]">
-      <p id="cardBottom">{{card.value}}</p>
     </div>
   </div>
 </template>
@@ -95,12 +94,6 @@ export default {
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
 }
 
-#cardTop {
-  align-self: flex-start;
-}
-#cardBottom {
-  align-self: flex-end;
-}
 #blankImg {
   height: 90%;
   width: 80%;

@@ -1,14 +1,12 @@
 <template>
   <div id="container">
     <div class="card">
-      <p id="cardTop">{{pair[0].value}}</p>
+      <p>{{pair[0].value}}</p>
       <img :src="this[pair[0].suit]">
-      <p id="cardBottom">{{pair[0].value}}</p>
     </div>
     <div class="card">
-      <p id="cardTop">{{pair[1].value}}</p>
+      <p>{{pair[1].value}}</p>
       <img :src="this[pair[1].suit]">
-      <p id="cardBottom">{{pair[1].value}}</p>
     </div>
   </div>
 </template>
@@ -59,14 +57,6 @@ export default {
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
 }
 
-#cardTop {
-  align-self: flex-start;
-  margin-top: 5px;
-}
-#cardBottom {
-  align-self: flex-end;
-  padding-bottom: 10px;
-}
 img {
   height: 40px;
   width: 50px;
