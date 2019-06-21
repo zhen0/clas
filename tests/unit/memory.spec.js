@@ -22,4 +22,13 @@ describe("Memory.vue", () => {
     wrapper.setData({ storeState: { stillPlaying: false } });
     expect(wrapper.find("h1").text()).toMatch(successMessage);
   });
+  it("does not show the matched pairs by default", () => {
+    const wrapper = shallowMount(Memory);
+    expect(wrapper.find("#pairsOuter").exists()).toBe(false);
+  });
+  it("when show pairs button is clicked, matched pairs are show", () => {
+    const wrapper = shallowMount(Memory);
+    wrapper.findAll("button").trigger("click");
+    expect(wrapper.find("#pairsOuter").exists()).toBe(true);
+  });
 });
