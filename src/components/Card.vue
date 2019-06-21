@@ -6,9 +6,9 @@
       <img id="blankImg" :src="this[card.status]">
     </div>
     <div v-if="card.turned " id="card">
-      <p>{{card.value}}</p>
-
-      <img :src="this[card.suit]">
+      <p id="cardTop">{{card.value}}</p>
+      <img id="symbolImg" :src="this[card.suit]">
+      <p id="cardBottom">{{card.value}}</p>
     </div>
   </div>
 </template>
@@ -27,12 +27,9 @@ export default {
 
       hearts:
         "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/heavy-black-heart_2764.png",
-      diamonds:
-        "https://previews.123rf.com/images/stockgiu/stockgiu1807/stockgiu180703240/105877705-doodle-diamonds-casino-game-card-symbol-vector-illustration.jpg",
-      spades:
-        "https://banner2.kisspng.com/20180408/ajw/kisspng-ace-of-spades-drawing-ace-card-5aca5e84c20da9.0692545715232119087949.jpg",
-      clubs:
-        "https://cdn3.iconfinder.com/data/icons/game-icon-set/50/clubs-512.png",
+      diamonds: "http://clipart-library.com/images/AcbKbk8oi.png",
+      spades: "http://clipart-library.com/images/8TAEAqdTa.png",
+      clubs: "http://clipart-library.com/images/rcLxd7Xc8.png",
       joker:
         "https://cdn1.iconfinder.com/data/icons/shadies-casino-gambling/65/Casino_gambling_cards_card_games_black_jack_poker_spades_hearts_diamonds_clubs_joker-512.png",
       chosen:
@@ -89,17 +86,26 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   font-family: "Playfair Display", serif;
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
+}
+
+#cardTop {
+  align-self: flex-start;
+}
+#cardBottom {
+  align-self: flex-end;
 }
 #blankImg {
   height: 90%;
   width: 80%;
   align-self: center;
 }
-img {
-  height: 40px;
-  width: 50px;
+#symbolImg {
+  height: 65px;
+  width: 60px;
+  flex-grow: 2;
 }
 </style>
