@@ -27,9 +27,12 @@ export default {
 
       hearts:
         "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/heavy-black-heart_2764.png",
-      diamonds: "http://clipart-library.com/images/AcbKbk8oi.png",
-      spades: "http://clipart-library.com/images/8TAEAqdTa.png",
-      clubs: "http://clipart-library.com/images/rcLxd7Xc8.png",
+      diamonds:
+        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/black-diamond-suit_2666.png",
+      spades:
+        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/black-spade-suit_2660.png",
+      clubs:
+        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/198/black-club-suit_2663.png",
       joker:
         "https://cdn1.iconfinder.com/data/icons/shadies-casino-gambling/65/Casino_gambling_cards_card_games_black_jack_poker_spades_hearts_diamonds_clubs_joker-512.png",
       chosen:

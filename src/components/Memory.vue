@@ -6,7 +6,7 @@
     <p
       class="intro"
     >Click on a card to turn it over. Try to find two cards of the same color and value. You can only turn two cards at a time. You win if you find all the matching pairs.</p>
-    <p v-if="storeState.stillPlaying" id="stateMsg">{{this.storeState.msg}}</p>
+    <h3 v-if="storeState.stillPlaying" id="stateMsg">{{this.storeState.msg}}</h3>
     <h1 id="success" v-else>{{this.storeState.successMsg}}</h1>
 
     <button @click="submit">Submit Cards</button>
