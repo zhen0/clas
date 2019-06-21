@@ -2,6 +2,10 @@
 
 <template>
   <div>
+    <h1 class="title">Welcome to Memory</h1>
+    <p
+      class="intro"
+    >Click on a card to turn it over. Try to find two cards of the same color and value. You can only turn two cards at a time. You win if you find all the matching pairs.</p>
     <p v-if="storeState.stillPlaying">{{this.storeState.msg}}</p>
     <h1 v-else>{{this.storeState.successMsg}}</h1>
 
@@ -104,6 +108,9 @@ ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+}
+.intro {
+  font-size: 18px;
 }
 
 li {
