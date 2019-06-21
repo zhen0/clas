@@ -101,4 +101,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 deployed on firebase at https://memory-201906.web.app/
 make sure firebase cli tools are installed
-enter "firebase deploy" into terminal when in root of this project directory
+npm run build
+firebase init (choose histing, single page) - this has been done already!
+in firebase.json make sure dist is entered in : "hosting": {
+"public": "dist",...}
+check page with firebase serve
+enter "firebase deploy" into terminal when in root of this project directory to finally deploy
