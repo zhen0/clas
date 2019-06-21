@@ -107,8 +107,7 @@ export default {
   align-self: center;
 }
 #symbolImg {
-  height: 65px;
-  width: 60px;
-  flex-grow: 2;
+  height: 50px;
+  width: 40px;
 }
 </style>
