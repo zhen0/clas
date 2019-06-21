@@ -34,7 +34,8 @@ export const store = {
     matched: [],
     match: false,
     pairs: false,
-    stillPlaying: true
+    stillPlaying: true,
+    inGame: true
   },
   turnCards() {
     this.state.cards = this.state.cards.map(card => ({
@@ -121,11 +122,30 @@ export const store = {
     this.state.selected = [];
   },
   redo() {
-    this.state = {
-      cards: deck.map(card => ({ ...card, turned: false, unturned: true })),
+    (this.state = {
+      cards: deck.map(card => ({
+        ...card,
+        turned: false,
+        unturned: true,
+        status: "not"
+      })),
       // cards: [
-      //   { id: 1, suit: "hearts", value: 3, turned: false, unturned: true },
-      //   { id: 2, suit: "diamonds", value: 3, turned: false, unturned: true }
+      //   {
+      //     id: 1,
+      //     suit: "hearts",
+      //     value: 3,
+      //     turned: false,
+      //     unturned: true,
+      //     status: "not"
+      //   },
+      //   {
+      //     id: 2,
+      //     suit: "diamonds",
+      //     value: 3,
+      //     turned: false,
+      //     unturned: true,
+      //     status: "not"
+      //   }
       // ],
 
       msg: "Choose a card",
@@ -136,9 +156,8 @@ export const store = {
       match: false,
       pairs: false,
       stillPlaying: true
-    };
-
-    this.shuffle();
+    }),
+      this.shuffle();
   }
 };
 

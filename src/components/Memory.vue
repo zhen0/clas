@@ -7,7 +7,7 @@
 
     <button @click="submit">Submit Cards</button>
     <button id="viewPairs" @click="view">View/Hide My Pairs</button>
-
+    <button @click="redo">Start a New Game</button>
     <div v-if="storeState.pairs" id="pairsOuter">
       <div v-for="(pair, index) in storeState.matched" v-bind:key="index" id="pairsBox">
         <Pairs :pair="pair"/>
@@ -26,6 +26,7 @@
 import { store } from "../store.js";
 import Card from "./Card.vue";
 import Pairs from "./Pairs.vue";
+
 export default {
   name: "Memory",
   props: {},
@@ -43,7 +44,9 @@ export default {
       this.storeState.pairs = !this.storeState.pairs;
     },
     redo() {
+      this.storeState.counter = 0;
       store.redo();
+      this.storeState = store.state;
     },
     submit() {
       if (this.storeState.counter < 2) {

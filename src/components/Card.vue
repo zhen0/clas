@@ -2,12 +2,10 @@
 
 <template>
   <div>
-    <div v-if="card.unturned" @click="turn" id="card">
-      <!-- <p>{{card.value}}{{card.suit}}</p> -->
-
+    <div v-if="card.unturned " @click="turn" id="card">
       <img id="blankImg" :src="this[card.status]">
     </div>
-    <div v-if="card.turned" id="card">
+    <div v-if="card.turned " id="card">
       <p>{{card.value}}</p>
 
       <img :src="this[card.suit]">
@@ -45,6 +43,7 @@ export default {
   },
   methods: {
     turn() {
+      console.log("counter", this.storeState.counter);
       this.storeState.counter++;
       if (this.storeState.counter <= 2) {
         this.card.unturned = false;
