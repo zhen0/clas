@@ -11,7 +11,9 @@
   "dependencies": {
     "jest": "^24.8.0",
     "sinon": "^7.3.2",
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.7",
+    "vuedraggable": "^2.23.0"
   },
   "jest": {
     "snapshotSerializers": [

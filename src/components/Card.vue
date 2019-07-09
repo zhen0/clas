@@ -3,11 +3,14 @@
 <template>
   <div>
     <div v-if="card.unturned " @click="turn" id="card">
-      <img id="blankImg" :src="this[card.status]">
+      <h1>{{card.sound}}</h1>
     </div>
-    <div v-if="card.turned " id="card">
-      <p>{{card.value}}</p>
-      <img id="symbolImg" :src="this[card.suit]">
+    <div v-if="card.turned " @click="turn" id="card">
+      <div id="word">
+        <p id="sound">{{card.sound}}</p>
+        <p>{{card.word}}</p>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" />
     </div>
   </div>
 </template>
@@ -15,62 +18,20 @@
 
 <script>
 import { store } from "../store.js";
-import { setTimeout } from "timers";
+
 export default {
   name: "Card",
   props: { card: Object },
   data() {
     return {
       isChosen: this.card.suit === "chosen" ? true : false,
-      storeState: store.state,
-
-      hearts:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/heavy-black-heart_2764.png",
-      diamonds:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/black-diamond-suit_2666.png",
-      spades:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/black-spade-suit_2660.png",
-      clubs:
-        "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/198/black-club-suit_2663.png",
-      joker:
-        "https://cdn1.iconfinder.com/data/icons/shadies-casino-gambling/65/Casino_gambling_cards_card_games_black_jack_poker_spades_hearts_diamonds_clubs_joker-512.png",
-      chosen:
-        "https://dictionary.cambridge.org/images/thumb/cross_noun_002_09265.jpg?version=4.0.82",
-      not:
-        "https://images.blogthings.com/thejapanesepatterntest/japanese-pattern-1.png"
+      storeState: store.state
     };
   },
   methods: {
     turn() {
-      this.storeState.counter++;
-      if (this.storeState.counter <= 2) {
-        this.card.unturned = false;
-        this.card.turned = true;
-        store.setSelected(this.card);
-      }
-      if (this.storeState.counter === 2) {
-        this.checkAndUpdate();
-      }
-      if (this.storeState.counter > 2) {
-        this.storeState.msg = "Select only two cards per turn!";
-        setTimeout(this.update, 1000);
-      }
-    },
-
-    async checkAndUpdate() {
-      await store.checkMatch();
-      if (this.storeState.match) {
-        this.storeState.msg = "Congratulations.  Those cards match";
-        setTimeout(this.update, 2000);
-      } else {
-        this.storeState.msg = "Sorry, no match.";
-        setTimeout(this.update, 2000);
-      }
-    },
-    update() {
-      this.storeState.counter = 0;
-      store.turnCards();
-      this.storeState.msg = "Choose a card";
+      this.card.unturned = this.card.unturned ? false : true;
+      this.card.turned = this.card.turned ? false : true;
     }
   }
 };
@@ -80,9 +41,10 @@ export default {
 <style scoped lang="scss">
 #card {
   background-color: white;
+  border: orange;
   margin: 5px;
-  width: 80px;
-  height: 120px;
+  width: 200px;
+  height: 300px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -93,14 +55,33 @@ export default {
   font-family: "Playfair Display", serif;
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
 }
-
-#blankImg {
-  height: 90%;
-  width: 80%;
-  align-self: center;
+#word {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  box-sizing: border-box;
+  width: 95%;
+  height: 30%;
+  border: solid orange 5px;
+  padding: 5px;
+  justify-content: center;
+  border-bottom: 0px;
+  font-family: Comic Sans MS;
 }
+#sound {
+  color: red;
+  font-size: 30px;
+  font-family: Comic Sans MS;
+}
+
 #symbolImg {
-  height: 50px;
-  width: 40px;
+  height: 150px;
+  width: 140px;
+  box-sizing: border-box;
+  width: 95%;
+  height: 50;
+  border: solid orange 5px;
+  padding: 15px;
+  justify-content: center;
 }
 </style>

@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="app">
-    <Memory/>
+    <Phonics />
   </div>
 </template>
 
 <script>
-import Memory from "./components/Memory.vue";
+import Phonics from "./components/Phonics.vue";
 
 export default {
   name: "app",
   components: {
-    Memory
+    Phonics
   }
 };
 </script>

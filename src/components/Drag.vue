@@ -2,36 +2,26 @@
 
 <template>
   <div>
-    <h1 class="title">Welcome to Memory</h1>
-    <p
-      class="intro"
-    >Click on a card to turn it over. Try to find two cards of the same color and value. You can only turn two cards at a time. You win if you find all the matching pairs.</p>
+    <h1 class="title">Sound Cards</h1>
+    <p class="intro">Click on a sound to see the word and picture.</p>
     <h3 v-if="storeState.stillPlaying" id="stateMsg">{{this.storeState.msg}}</h3>
     <h1 id="success" v-else>{{this.storeState.successMsg}}</h1>
-    <button @click="submit">Submit Cards</button>
-    <button id="viewPairs" @click="view">View/Hide My Pairs</button>
-    <button @click="redo">Start a New Game</button>
-    <div v-if="storeState.pairs" id="pairsOuter">
-      <div v-for="(pair, index) in storeState.matched" v-bind:key="index" id="pairsBox">
-        <Pairs :pair="pair"/>
-      </div>
-    </div>
-    <div id="container">
+    <draggable @start="drag=true" @end="drag=false" id="drag">
       <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
-        <Card :card="card"/>
+        <Card :card="card" />
       </div>
-    </div>
+    </draggable>
   </div>
 </template>
 
 
 <script>
 import { store } from "../store.js";
+import draggable from "vuedraggable";
 import Card from "./Card.vue";
-import Pairs from "./Pairs.vue";
 
 export default {
-  name: "Memory",
+  name: "Drag",
   props: {},
   data() {
     return {
@@ -71,7 +61,7 @@ export default {
   },
   components: {
     Card,
-    Pairs
+    draggable
   }
 };
 </script>
@@ -100,6 +90,10 @@ ul {
   padding-bottom: 10px;
   padding-top: 5px;
   margin-top: 20px;
+}
+#drag {
+  display: flex;
+  flex-wrap: wrap;
 }
 #pairsOuter {
   display: flex;
