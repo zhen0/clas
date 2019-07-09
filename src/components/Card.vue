@@ -3,7 +3,7 @@
 <template>
   <div>
     <div v-if="card.unturned " @click="turn" id="card">
-      <h1>{{card.sound}}</h1>
+      <h1 id="letter">{{card.front}}</h1>
     </div>
     <div v-if="card.turned " @click="turn" id="card">
       <div id="word">
@@ -54,6 +54,10 @@ export default {
   padding-right: 5px;
   font-family: "Playfair Display", serif;
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
+}
+#letter {
+  font-family: Comic Sans MS;
+  font-size: 90px;
 }
 #word {
   display: flex;

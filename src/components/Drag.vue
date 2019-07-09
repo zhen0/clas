@@ -2,12 +2,11 @@
 
 <template>
   <div>
-    <h1 class="title">Sound Cards</h1>
-    <p class="intro">Click on a sound to see the word and picture.</p>
-    <h3 v-if="storeState.stillPlaying" id="stateMsg">{{this.storeState.msg}}</h3>
-    <h1 id="success" v-else>{{this.storeState.successMsg}}</h1>
+    <h1 class="title">Sentence Actvity</h1>
+    <p class="intro">Move the cards to make a sentence</p>
+
     <draggable @start="drag=true" @end="drag=false" id="drag">
-      <div id="card" v-for="card in storeState.cards" v-bind:key="card.id">
+      <div id="card" v-for="card in storeState.wordCards" v-bind:key="card.id">
         <Card :card="card" />
       </div>
     </draggable>
@@ -32,33 +31,7 @@ export default {
   created() {
     store.shuffle();
   },
-  methods: {
-    view() {
-      this.storeState.pairs = !this.storeState.pairs;
-    },
-    redo() {
-      this.storeState.counter = 0;
-      store.redo();
-      this.storeState = store.state;
-    },
-    submit() {
-      if (this.storeState.counter < 2) {
-        this.storeState.msg = "Please click on 2 cards before you submit";
-      } else {
-        if (this.storeState.match) {
-          this.storeState.msg = "Congratulations.  Those cards match";
-          this.storeState.counter = 0;
-        } else {
-          this.storeState.msg = "Sorry, not a match";
-          store.turnCards();
-          this.storeState.counter = 0;
-          setTimeout(() => {
-            this.storeState.msg = "Choose a card";
-          }, 3000);
-        }
-      }
-    }
-  },
+  methods: {},
   components: {
     Card,
     draggable
@@ -86,27 +59,14 @@ ul {
   justify-content: space-evenly;
   background-color: #e8eef2;
 }
-#stateMsg {
-  padding-bottom: 10px;
-  padding-top: 5px;
-  margin-top: 20px;
-}
+
 #drag {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
-#pairsOuter {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
 
-  align-items: flex-start;
-}
-#pairsBox {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
 .intro {
   font-size: 18px;
 }

@@ -5,9 +5,9 @@
     <h1 class="title">Phonics for Life</h1>
     <p class="intro">Choose An Activity.</p>
     <div>
-      <router-link to="/flash">Flash</router-link>
+      <router-link to="/flash">Flash Cards</router-link>
       {{" "}}
-      <router-link to="/drag">Drag</router-link>
+      <router-link to="/drag">Sentence Activity</router-link>
 
       <router-view></router-view>
     </div>

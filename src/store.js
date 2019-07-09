@@ -1,5 +1,5 @@
 import deck from "./data/deck.js";
-
+import words from "./data/words.js";
 export const store = {
   state: {
     cards: deck.map(card => ({
@@ -7,6 +7,11 @@ export const store = {
       turned: false,
       unturned: true,
       status: "not"
+    })),
+    wordCards: words.map(card => ({
+      ...card,
+      turned: false,
+      unturned: true
     })),
     // cards: [
     //   {
@@ -96,11 +101,11 @@ export const store = {
     }
   },
   shuffle() {
-    for (let i = this.state.cards.length - 1; i > 0; i--) {
+    for (let i = this.state.wordCards.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * i);
-      let temp = this.state.cards[i];
-      this.state.cards[i] = this.state.cards[j];
-      this.state.cards[j] = temp;
+      let temp = this.state.wordCards[i];
+      this.state.wordCards[i] = this.state.wordCards[j];
+      this.state.wordCards[j] = temp;
     }
   },
 
