@@ -2,12 +2,12 @@
 
 <template>
   <div>
-    <h1 class="title">Phonics for Life</h1>
+    <h1 class="title">Phonics For Life</h1>
     <p class="intro">Choose An Activity.</p>
     <div>
-      <router-link to="/flash">Flash Cards</router-link>
+      <router-link to="/flash" class="intro">Flash Cards</router-link>
       {{" "}}
-      <router-link to="/drag">Sentence Activity</router-link>
+      <router-link to="/drag" class="intro">Sentence Activity</router-link>
 
       <router-view></router-view>
     </div>
@@ -35,8 +35,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
+h1 {
+  font-family: "Patrick Hand";
 }
 
 #container {
@@ -51,5 +52,6 @@ h3 {
 
 .intro {
   font-size: 18px;
+  font-family: "Patrick Hand";
 }
 </style>

@@ -34,10 +34,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
 #container {
   margin: auto;
   display: flex;
@@ -50,13 +47,9 @@ h3 {
 
 .intro {
   font-size: 18px;
+  font-family: "Patrick Hand";
 }
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.title {
+  font-family: "Patrick Hand";
 }
 </style>

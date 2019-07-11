@@ -4,14 +4,11 @@ export const store = {
   state: {
     cards: deck.map(card => ({
       ...card,
-      turned: false,
-      unturned: true,
-      status: "not"
+      turned: true
     })),
     wordCards: words.map(card => ({
       ...card,
-      turned: false,
-      unturned: true
+      turned: true
     })),
     // cards: [
     //   {

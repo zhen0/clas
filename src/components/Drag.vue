@@ -5,8 +5,8 @@
     <h1 class="title">Sentence Actvity</h1>
     <p class="intro">Move the cards to make a sentence</p>
 
-    <draggable @start="drag=true" @end="drag=false" id="drag">
-      <div id="card" v-for="card in storeState.wordCards" v-bind:key="card.id">
+    <draggable @start="drag=true" @end="drag=false" delay:500 id="container">
+      <div v-for="card in storeState.wordCards" v-bind:key="card.id" id="card">
         <Card :card="card" />
       </div>
     </draggable>
@@ -41,15 +41,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
 #container {
   margin: auto;
   display: flex;
@@ -60,22 +52,12 @@ ul {
   background-color: #e8eef2;
 }
 
-#drag {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 .intro {
   font-size: 18px;
+  font-family: "Patrick Hand";
 }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.title {
+  font-family: "Patrick Hand";
 }
 </style>
