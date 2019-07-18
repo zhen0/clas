@@ -3,10 +3,18 @@
 <template>
   <div>
     <h1 class="title">Sentence Actvity</h1>
-    <p class="intro">Move the cards to make a sentence</p>
+    <p class="intro">Look at the cards below and think what sentences you could make.</p>
 
-    <draggable @start="drag=true" @end="drag=false" delay:500 id="container">
+    <draggable id="container" :list="storeState.wordCards" group="words">
       <div v-for="card in storeState.wordCards" v-bind:key="card.id" id="card">
+        <Card :card="card" />
+      </div>
+    </draggable>
+    <p
+      class="intro"
+    >Drag the words onto the fullstop to move them into your sentence. Then you can move them to left or right to put your sentence in order.</p>
+    <draggable id="container" :list="sentence" group="words">
+      <div v-for="card in sentence" v-bind:key="card.id" id="card">
         <Card :card="card" />
       </div>
     </draggable>
@@ -24,7 +32,8 @@ export default {
   props: {},
   data() {
     return {
-      storeState: store.state
+      storeState: store.state,
+      sentence: [{ turned: true, front: "." }]
     };
   },
 

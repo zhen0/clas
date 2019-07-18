@@ -25,5 +25,6 @@ export default [
     imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
     sound: "p",
     id: 6
-  }
+  },
+  { front: "The" }
 ];
