@@ -7,7 +7,7 @@
 
     <draggable id="container" :list="storeState.wordCards" group="words">
       <div v-for="card in storeState.wordCards" v-bind:key="card.id" id="card">
-        <Card :card="card" />
+        <SentenceCard :card="card" />
       </div>
     </draggable>
     <p
@@ -15,7 +15,7 @@
     >Drag the words onto the fullstop to move them into your sentence. Then you can move them to left or right to put your sentence in order.</p>
     <draggable id="container" :list="sentence" group="words">
       <div v-for="card in sentence" v-bind:key="card.id" id="card">
-        <Card :card="card" />
+        <SentenceCard :card="card" />
       </div>
     </draggable>
   </div>
@@ -25,7 +25,7 @@
 <script>
 import { store } from "../store.js";
 import draggable from "vuedraggable";
-import Card from "./Card.vue";
+import SentenceCard from "./SentenceCards.vue";
 
 export default {
   name: "Drag",
@@ -42,7 +42,7 @@ export default {
   },
   methods: {},
   components: {
-    Card,
+    SentenceCard,
     draggable
   }
 };
