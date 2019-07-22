@@ -43,27 +43,28 @@ export const words1 = [
     id: 12,
     word: "man",
     imgUrl: "https://senact.s3.amazonaws.com/man.png",
-
+    color: "red",
     front: "man"
   },
   {
     id: 13,
     word: "cat",
     imgUrl: "https://senact.s3.amazonaws.com/cat.png",
-
+    color: "red",
     front: "cat"
   },
   {
     id: 14,
     word: "dog",
     imgUrl: "https://senact.s3.amazonaws.com/dog.png",
-    front: "dog"
+    front: "dog",
+    color: "red"
   },
   {
     id: 15,
     word: "cup",
     imgUrl: "https://senact.s3.amazonaws.com/cup.png",
-
+    color: "red",
     front: "cup"
   }
 ];

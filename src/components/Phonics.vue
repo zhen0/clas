@@ -9,6 +9,8 @@
       <router-link to="/flash" class="intro">Flash Cards</router-link>
       {{" "}}
       <router-link to="/drag" class="intro">Sentence Activity</router-link>
+      {{" "}}
+      <router-link to="/match" class="intro">Statement/Picture Match</router-link>
     </div>
     <router-view></router-view>
   </div>
