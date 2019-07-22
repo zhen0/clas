@@ -113,12 +113,12 @@ export default {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 150px;
   }
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 30px;
+    font-size: 50px;
     box-sizing: border-box;
     width: 90%;
     height: 30%;
@@ -132,7 +132,7 @@ export default {
 
   #sound {
     color: red;
-    font-size: 30px;
+    font-size: 50px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 
@@ -167,7 +167,7 @@ export default {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 200px;
+    font-size: 300px;
   }
   #word {
     display: flex;
