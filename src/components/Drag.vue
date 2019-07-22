@@ -13,7 +13,7 @@
     <p
       class="intro"
     >Drag the words onto the fullstop to move them into your sentence. Then you can move them to left or right to put your sentence in order.</p>
-    <draggable id="container" :list="sentence" group="words">
+    <draggable id="sentence" :list="sentence" group="words">
       <div v-for="card in sentence" v-bind:key="card.id" id="card">
         <SentenceCard :card="card" />
       </div>
@@ -60,26 +60,86 @@ export default {
   justify-content: space-evenly;
   background-color: #e8eef2;
 }
+#sentence {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e8eef2;
+}
 
 .intro {
-  font-size: 18px;
+  font-size: 10px;
   font-family: "Patrick Hand";
   margin-top: 5px;
 }
-#card {
-  background-color: white;
-  border: orange;
-  margin: 5px;
-  width: 150px;
-  height: 80px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 600px) {
+  .intro {
+    font-size: 18px;
+    font-family: "Patrick Hand";
+    margin-top: 5px;
+  }
+  #card {
+    background-color: white;
+    border: orange;
+    margin: 5px;
+    width: 50px;
+    height: 75px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  font-family: "Patrick Hand", "Comic Sans MS";
-  box-shadow: 10px 10px 10px rgb(46, 46, 46);
+    font-family: "Patrick Hand", "Comic Sans MS";
+    box-shadow: 10px 10px 10px rgb(46, 46, 46);
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1500px) {
+  .intro {
+    font-size: 20px;
+    font-family: "Patrick Hand";
+    margin-top: 5px;
+  }
+  #card {
+    background-color: white;
+    border: orange;
+    margin: 5px;
+    width: 120px;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Patrick Hand", "Comic Sans MS";
+    box-shadow: 10px 10px 10px rgb(46, 46, 46);
+  }
+}
+@media screen and (min-width: 1500px) {
+  .intro {
+    font-size: 30px;
+    font-family: "Patrick Hand";
+    margin-top: 5px;
+  }
+  #card {
+    background-color: white;
+    border: orange;
+    margin: 5px;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Patrick Hand", "Comic Sans MS";
+    box-shadow: 10px 10px 10px rgb(46, 46, 46);
+  }
 }
 
 .title {

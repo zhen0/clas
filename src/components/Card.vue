@@ -40,13 +40,13 @@ export default {
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 600px) {
   #card {
     background-color: white;
     border: orange;
     margin: 5px;
-    width: 150px;
-    height: 300px;
+    width: 100px;
+    height: 150px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 100em) {
+@media screen and (min-width: 600px) and (max-width: 1500px) {
   #card {
     background-color: white;
     border: orange;
@@ -147,7 +147,7 @@ export default {
     justify-content: center;
   }
 }
-@media screen and (min-width: 100em) {
+@media screen and (min-width: 1500px) {
   #card {
     background-color: white;
     border: orange;
