@@ -46,7 +46,6 @@ h1 {
   justify-content: flex-start;
   margin: 0px;
   align-items: center;
-  height: 50px;
 }
 
 #navBar {
