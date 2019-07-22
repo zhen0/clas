@@ -64,9 +64,27 @@ export default {
 .intro {
   font-size: 18px;
   font-family: "Patrick Hand";
+  margin-top: 5px;
+}
+#card {
+  background-color: white;
+  border: orange;
+  margin: 5px;
+  width: 150px;
+  height: 80px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Patrick Hand", "Comic Sans MS";
+  box-shadow: 10px 10px 10px rgb(46, 46, 46);
 }
 
 .title {
   font-family: "Patrick Hand";
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 </style>

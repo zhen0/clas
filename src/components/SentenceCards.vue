@@ -1,13 +1,10 @@
 <template>
   <div>
-    <div v-if="card.turned" @click="turn" id="card">
-      <h1 id="letter">{{card.front}}</h1>
+    <div v-if="card.turned" @click="turn">
+      <h1 v-if="card.color" :id="card.color">{{card.front}}</h1>
+      <h1 v-else id="letter">{{card.front}}</h1>
     </div>
-    <div v-else @click="turn" id="card">
-      <div id="word">
-        <p id="sound">{{card.sound}}</p>
-        <p>{{card.word}}</p>
-      </div>
+    <div v-else @click="turn">
       <img id="symbolImg" :src="card.imgUrl" />
     </div>
   </div>
@@ -37,40 +34,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
-#card {
-  background-color: white;
-  border: orange;
-  margin: 5px;
-  //   width: 150px;
-  //   height: 250px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-left: 15%;
-  padding-right: 15%;
-  font-family: "Patrick Hand", "Comic Sans MS";
-  box-shadow: 10px 10px 10px rgb(46, 46, 46);
-  flex: 1 1 auto;
-}
+
 #letter {
   font-family: "Patrick Hand", Comic Sans MS;
   font-size: 50px;
-}
-#word {
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  box-sizing: border-box;
-  width: 90%;
-  height: 30%;
-  border: solid orange 5px;
-  padding: 2%;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 0px;
-  font-family: "Patrick Hand", Comic Sans MS;
 }
 
 #sound {
@@ -79,14 +46,29 @@ export default {
   font-family: "Patrick Hand", Comic Sans MS;
 }
 
+#blue {
+  color: blue;
+  font-family: "Patrick Hand", Comic Sans MS;
+  font-size: 50px;
+}
+#grey {
+  color: grey;
+  font-family: "Patrick Hand", Comic Sans MS;
+  font-size: 50px;
+}
+#orange {
+  color: orange;
+  font-family: "Patrick Hand", Comic Sans MS;
+  font-size: 45px;
+}
+
 #symbolImg {
-  height: 150px;
-  width: 140px;
   box-sizing: border-box;
-  width: 90%;
-  height: 50;
-  border: solid orange 5px;
+
+  height: 75px;
+
   padding: 2%;
+  align-items: center;
   justify-content: center;
 }
 </style>

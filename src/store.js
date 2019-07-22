@@ -1,12 +1,12 @@
 import deck from "./data/deck.js";
-import words from "./data/words.js";
+import { words1 } from "./data/sentenceActPhase2.js";
 export const store = {
   state: {
     cards: deck.map(card => ({
       ...card,
       turned: true
     })),
-    wordCards: words.map(card => ({
+    wordCards: words1.map(card => ({
       ...card,
       turned: true
     })),

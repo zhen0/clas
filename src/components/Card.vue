@@ -50,8 +50,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 5px;
+  padding-right: 5px;
   font-family: "Patrick Hand", "Comic Sans MS";
   box-shadow: 10px 10px 10px rgb(46, 46, 46);
 }
