@@ -1,16 +1,16 @@
 
 
 <template>
-  <div>
-    <h1 class="title">Phonics For Life</h1>
-    <p class="intro">Choose An Activity.</p>
-    <div>
+  <div id="container">
+    <div id="navBar">
+      <h1 class="title">Phonics For Life</h1>
+      <p class="intro">Choose An Activity:</p>
+
       <router-link to="/flash" class="intro">Flash Cards</router-link>
       {{" "}}
       <router-link to="/drag" class="intro">Sentence Activity</router-link>
-
-      <router-view></router-view>
     </div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -39,19 +39,33 @@ export default {
 h1 {
   font-family: "Patrick Hand";
 }
-
 #container {
-  margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0px;
   align-items: center;
-  justify-content: space-evenly;
+}
+
+#navBar {
+  // margin: auto;
+  display: flex;
+  justify-content: flex-start;
   background-color: #e8eef2;
+  align-self: flex-start;
+  align-items: center;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .intro {
   font-size: 18px;
   font-family: "Patrick Hand";
+  padding: 2%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
 }
 </style>
