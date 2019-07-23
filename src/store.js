@@ -27,7 +27,7 @@ export const store = {
   },
   match() {
     this.state.pic === this.state.statement
-      ? (this.state.message = "You got it!")
+      ? (this.state.message = "Correct!")
       : (this.state.message = "Try again!");
     return this.state.message;
   }
