@@ -37,8 +37,8 @@ export default {
   #card {
     background-color: white;
     margin: 5px;
-    width: 10px;
-    height: 15px;
+    width: 80px;
+    height: 100px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,7 @@ export default {
 
   #sound {
     color: black;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 }
@@ -89,7 +89,7 @@ export default {
     border: orange;
     margin: 5px;
     width: 500px;
-    height: 800px;
+    height: 500px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@ export default {
   }
   #sound {
     color: black;
-    font-size: 150px;
+    font-size: 100px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 }

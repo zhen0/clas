@@ -84,9 +84,15 @@ export default {
 }
 @media screen and (max-width: 600px) {
   .intro {
-    font-size: 18px;
+    font-size: 15px;
     font-family: "Patrick Hand";
     margin-top: 5px;
+  }
+  .title {
+    font-family: "Patrick Hand";
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 600px) and (max-width: 1500px) {
@@ -96,6 +102,11 @@ export default {
     margin-top: 5px;
     margin-bottom: 5px;
   }
+  .title {
+    font-family: "Patrick Hand";
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 @media screen and (min-width: 1500px) {
   .intro {
@@ -104,11 +115,10 @@ export default {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-}
-
-.title {
-  font-family: "Patrick Hand";
-  margin-top: 0px;
-  margin-bottom: 0px;
+  .title {
+    font-family: "Patrick Hand";
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 </style>

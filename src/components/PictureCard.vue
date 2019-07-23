@@ -38,8 +38,8 @@ export default {
   #card {
     background-color: white;
     margin: 5px;
-    width: 10px;
-    height: 15px;
+    width: 80px;
+    height: 80px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@ export default {
   #symbolImg {
     box-sizing: border-box;
     width: 90%;
-    height: 50%;
+    height: 90%;
     border: solid orange 5px;
     padding: 2%;
     justify-content: center;
@@ -94,7 +94,7 @@ export default {
   }
 
   #symbolImg {
-    box-sizing: border-box;
+    // box-sizing: border-box;
     width: 90%;
     height: 90%;
 
@@ -108,7 +108,7 @@ export default {
     border: orange;
     margin: 5px;
     width: 500px;
-    height: 800px;
+    height: 500px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -120,27 +120,9 @@ export default {
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
     flex: 1 1 auto;
   }
-  #letter {
-    font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 300px;
-  }
-  #word {
-    display: flex;
-    flex-direction: row;
-    font-size: 150px;
-    box-sizing: border-box;
-    width: 90%;
-    height: 30%;
-    border: solid orange 5px;
-    padding: 2%;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0px;
-    font-family: "Patrick Hand", Comic Sans MS;
-  }
 
   #sound {
-    color: red;
+    color: black;
     font-size: 150px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
@@ -148,7 +130,7 @@ export default {
   #symbolImg {
     box-sizing: border-box;
     width: 90%;
-    height: 50%;
+    height: 90%;
     border: solid orange 5px;
     padding: 2%;
     justify-content: center;
