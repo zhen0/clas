@@ -63,6 +63,7 @@ export default {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
   background-color: #e8eef2;
 }
 .check {

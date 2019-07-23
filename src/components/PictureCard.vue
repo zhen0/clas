@@ -97,7 +97,6 @@ export default {
     // box-sizing: border-box;
     width: 90%;
     height: 90%;
-
     padding: 2%;
     justify-content: center;
   }
