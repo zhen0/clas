@@ -37,7 +37,7 @@ export const sounds = {
     {
       id: 5,
       word: "gloo",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/igloo.png",
       sound: "i",
       front: "i",
       turned: true
@@ -45,7 +45,7 @@ export const sounds = {
     {
       id: 6,
       word: "et",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/net.png",
       sound: "n",
       front: "n",
       turned: true
@@ -53,7 +53,7 @@ export const sounds = {
     {
       id: 7,
       word: "ouse",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/mouse.png",
       sound: "m",
       front: "m",
       turned: true
@@ -61,7 +61,7 @@ export const sounds = {
     {
       id: 8,
       word: "og",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/dog.png",
       sound: "d",
       front: "d",
       turned: true
@@ -71,7 +71,7 @@ export const sounds = {
     {
       id: 9,
       word: "ate",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/gate.png",
       sound: "g",
       front: "g",
       turned: true
@@ -79,7 +79,7 @@ export const sounds = {
     {
       id: 10,
       word: "range",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/orange.png",
       sound: "o",
       front: "o",
       turned: true
@@ -87,7 +87,7 @@ export const sounds = {
     {
       id: 11,
       word: "at",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/cat.png",
       sound: "c",
       front: "c",
       turned: true
@@ -95,7 +95,7 @@ export const sounds = {
     {
       id: 12,
       word: "ey",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/key.png",
       sound: "k",
       front: "k",
       turned: true
@@ -104,8 +104,8 @@ export const sounds = {
   four: [
     {
       id: 13,
-      word: "clo",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      word: "so",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/sock.png",
       sound: "ck",
       front: "ck",
       turned: true,
@@ -114,7 +114,7 @@ export const sounds = {
     {
       id: 14,
       word: "lephant",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/elephant.png",
       sound: "e",
       front: "e",
       turned: true
@@ -122,7 +122,7 @@ export const sounds = {
     {
       id: 15,
       word: "mbrella",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/umbrella.png",
       sound: "u",
       front: "u",
       turned: true
@@ -130,7 +130,7 @@ export const sounds = {
     {
       id: 16,
       word: "abbit",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/rabbit.png",
       sound: "r",
       front: "r",
       turned: true
