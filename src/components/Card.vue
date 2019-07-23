@@ -5,6 +5,40 @@
     <div v-if="card.turned" @click="turn" id="card">
       <h1 id="letter">{{card.front}}</h1>
     </div>
+    <div v-else-if="card.end" @click="turn" id="card">
+      <div id="word">
+        <p>{{card.word}}</p>
+        <p id="sound">{{card.sound}}</p>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" />
+    </div>
+    <div v-else-if="card.mid1" @click="turn" id="card">
+      <div id="word">
+        <p>{{card.word1}}</p>
+        <p id="sound">{{card.sound}}</p>
+        <p>{{card.word2}}</p>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" />
+    </div>
+    <div v-else-if="card.mid2" @click="turn" id="card">
+      <div id="word">
+        <p id="sound">{{card.sound1}}</p>
+        <p>{{card.word1}}</p>
+        <p id="sound">{{card.sound2}}</p>
+        <p>{{card.word2}}</p>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" />
+    </div>
+    <div v-else-if="card.mid3" @click="turn" id="card">
+      <div id="word">
+        <p>{{card.word1}}</p>
+        <p id="sound">{{card.sound1}}</p>
+
+        <p>{{card.word2}}</p>
+        <p id="sound">{{card.sound2}}</p>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" />
+    </div>
     <div v-else @click="turn" id="card">
       <div id="word">
         <p id="sound">{{card.sound}}</p>

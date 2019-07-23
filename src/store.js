@@ -1,11 +1,11 @@
-import deck from "./data/deck.js";
+import { sounds } from "./data/flashPhase2.js";
 import { words1 } from "./data/sentenceActPhase2.js";
 import { stats1 } from "./data/statementsPhase2.js";
 import { pics1 } from "./data/statPicsPhase2.js";
 
 export const store = {
   state: {
-    cards: deck.map(card => ({
+    cards: sounds.one.map(card => ({
       ...card,
       turned: true
     })),
