@@ -9,6 +9,8 @@
       <router-link to="/flash" class="intro">Flash Cards</router-link>
       {{" "}}
       <router-link to="/drag" class="intro">Sentence Activity</router-link>
+      {{" "}}
+      <router-link to="/match" class="intro">Statement /Picture Match</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -36,9 +38,38 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
-h1 {
-  font-family: "Patrick Hand";
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-family: "Patrick Hand";
+    font-size: 20px;
+  }
+  .intro {
+    font-size: 15px;
+    font-family: "Patrick Hand";
+    padding: 2%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 }
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-family: "Patrick Hand";
+  }
+  .intro {
+    font-size: 18px;
+    font-family: "Patrick Hand";
+    padding: 2%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+  }
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -58,14 +89,5 @@ h1 {
   height: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-
-.intro {
-  font-size: 18px;
-  font-family: "Patrick Hand";
-  padding: 2%;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
 }
 </style>

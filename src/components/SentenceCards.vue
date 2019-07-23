@@ -1,7 +1,8 @@
 <template>
   <div>
     <div v-if="card.turned && card.imgUrl" @click="turn">
-      <h1 id="letter">{{card.front}}</h1>
+      <h1 v-if="card.color" :id="card.color">{{card.front}}</h1>
+      <h1 v-else id="letter">{{card.front}}</h1>
     </div>
     <div v-else-if="card.turned">
       <h1 v-if="card.color" :id="card.color">{{card.front}}</h1>
@@ -49,6 +50,11 @@ export default {
     font-family: "Patrick Hand", Comic Sans MS;
     font-size: 20px;
   }
+  #red {
+    color: red;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 20px;
+  }
   #grey {
     color: grey;
     font-family: "Patrick Hand", Comic Sans MS;
@@ -72,13 +78,14 @@ export default {
     font-family: "Patrick Hand", Comic Sans MS;
     font-size: 50px;
   }
-  #sound {
-    color: red;
-    font-size: 30px;
-    font-family: "Patrick Hand", Comic Sans MS;
-  }
+
   #blue {
     color: blue;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 50px;
+  }
+  #red {
+    color: red;
     font-family: "Patrick Hand", Comic Sans MS;
     font-size: 50px;
   }
@@ -108,6 +115,11 @@ export default {
   }
   #blue {
     color: blue;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 100px;
+  }
+  #red {
+    color: red;
     font-family: "Patrick Hand", Comic Sans MS;
     font-size: 100px;
   }

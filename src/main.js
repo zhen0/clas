@@ -6,6 +6,7 @@ import App from "./App.vue";
 import Flash from "./components/Flash.vue";
 import Drag from "./components/Drag.vue";
 import Phonics from "./components/Phonics";
+import Match from "./components/Match.vue";
 
 Vue.use(VueRouter);
 
@@ -13,7 +14,8 @@ const routes = [
   { path: "/flash", component: Flash },
   { path: "/drag", component: Drag },
   { path: "/home", component: Phonics },
-  { path: "/app", component: App }
+  { path: "/app", component: App },
+  { path: "/match", component: Match }
 ];
 
 const router = new VueRouter({
