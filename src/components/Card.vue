@@ -79,8 +79,8 @@ export default {
     background-color: white;
     border: orange;
     margin: 2px;
-    width: 100px;
-    height: 150px;
+    width: 300px;
+    height: 550px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -91,15 +91,16 @@ export default {
     font-family: "Patrick Hand", "Comic Sans MS";
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
     flex: 1 1 auto;
+    margin-bottom: 25px;
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 200px;
   }
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 25px;
+    font-size: 80px;
     box-sizing: border-box;
     width: 92%;
     height: 30%;
@@ -113,7 +114,7 @@ export default {
 
   #sound {
     color: red;
-    font-size: 25px;
+    font-size: 80px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 
@@ -131,9 +132,9 @@ export default {
   #card {
     background-color: white;
     border: orange;
-    margin: 5px;
-    width: 200px;
-    height: 350px;
+    margin: 25px;
+    width: 700px;
+    height: 550px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -147,12 +148,12 @@ export default {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 150px;
+    font-size: 250px;
   }
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 50px;
+    font-size: 100px;
     box-sizing: border-box;
     width: 90%;
     height: 30%;
@@ -166,7 +167,7 @@ export default {
 
   #sound {
     color: red;
-    font-size: 50px;
+
     font-family: "Patrick Hand", Comic Sans MS;
   }
 

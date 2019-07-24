@@ -3,16 +3,16 @@
     <h1 class="title">Statement Picture Match</h1>
     <p class="intro">Click on a card and read the statement.</p>
 
-    <div class="container" :list="storeState.statementCards" group="words">
-      <div v-for="card in storeState.statementCards" v-bind:key="card.id">
+    <div class="container" :list="statements" group="words">
+      <div v-for="card in statements" v-bind:key="card.id">
         <StatementCard :card="card" />
       </div>
     </div>
     <p
       class="intro"
     >Choose the picture that matches your statement. Click on the picture to see the word for that picture.</p>
-    <div class="container" :list="storeState.pictureCards" group="words">
-      <div v-for="card in storeState.pictureCards" v-bind:key="card.id">
+    <div class="container" :list="pictures" group="words">
+      <div v-for="card in pictures" v-bind:key="card.id">
         <PictureCard :card="card" />
       </div>
     </div>
@@ -25,6 +25,8 @@
 
 
 <script>
+import { stats1 } from "../data/statementsPhase2.js";
+import { pics1 } from "../data/statPicsPhase2.js";
 import { store } from "../store.js";
 import PictureCard from "./PictureCard.vue";
 import StatementCard from "./StatementCard.vue";
@@ -34,8 +36,8 @@ export default {
   props: {},
   data() {
     return {
-      storeState: store.state,
-      // show: true,
+      pictures: pics1,
+      statements: stats1,
       message: ""
     };
   },
