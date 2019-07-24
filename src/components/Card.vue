@@ -79,8 +79,8 @@ export default {
     background-color: white;
     border: orange;
     margin: 2px;
-    width: 100px;
-    height: 150px;
+    width: 350px;
+    height: 500px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -94,12 +94,12 @@ export default {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 200px;
   }
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 25px;
+    font-size: 80px;
     box-sizing: border-box;
     width: 92%;
     height: 30%;
@@ -113,7 +113,7 @@ export default {
 
   #sound {
     color: red;
-    font-size: 25px;
+    font-size: 80px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 
