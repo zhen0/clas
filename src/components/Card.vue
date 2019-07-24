@@ -79,7 +79,7 @@ export default {
     background-color: white;
     border: orange;
     margin: 2px;
-    width: 350px;
+    width: 300px;
     height: 550px;
     border-radius: 5px;
     display: flex;
