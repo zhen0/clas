@@ -80,7 +80,7 @@ export default {
     border: orange;
     margin: 2px;
     width: 350px;
-    height: 500px;
+    height: 550px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -91,6 +91,7 @@ export default {
     font-family: "Patrick Hand", "Comic Sans MS";
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
     flex: 1 1 auto;
+    margin-bottom: 25px;
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
@@ -131,9 +132,9 @@ export default {
   #card {
     background-color: white;
     border: orange;
-    margin: 5px;
+    margin: 25px;
     width: 700px;
-    height: 600px;
+    height: 550px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
