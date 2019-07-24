@@ -1,11 +1,11 @@
-import { sounds } from "./data/flashPhase2.js";
+import { phase } from "./data/flash.js";
 import { words1 } from "./data/sentenceActPhase2.js";
 import { stats1 } from "./data/statementsPhase2.js";
 import { pics1 } from "./data/statPicsPhase2.js";
 
 export const store = {
   state: {
-    cards: sounds.one.map(card => ({
+    cards: phase.two.map(card => ({
       ...card,
       turned: true
     })),

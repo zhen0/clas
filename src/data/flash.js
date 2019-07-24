@@ -1,5 +1,5 @@
-export const sounds = {
-  one: [
+export const phase = {
+  two: [
     {
       id: 1,
       word: "nail",
@@ -31,9 +31,7 @@ export const sounds = {
       sound: "p",
       front: "p",
       turned: true
-    }
-  ],
-  two: [
+    },
     {
       id: 5,
       word: "gloo",
@@ -65,9 +63,7 @@ export const sounds = {
       sound: "d",
       front: "d",
       turned: true
-    }
-  ],
-  three: [
+    },
     {
       id: 9,
       word: "ate",
@@ -99,9 +95,7 @@ export const sounds = {
       sound: "k",
       front: "k",
       turned: true
-    }
-  ],
-  four: [
+    },
     {
       id: 13,
       word: "so",
