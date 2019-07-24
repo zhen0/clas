@@ -3,10 +3,9 @@
     <h1 class="title">Flash Cards</h1>
     <h3 class="title">Which set of flash cards do you want?</h3>
     <div id="container">
-      <div class="paper" @click="setSounds('one')">Set 1 (s, a, t, p)</div>
-      <div class="paper" @click="setSounds('two')">Set 2 (i, n, m, d)</div>
-      <div class="paper" @click="setSounds('three')">Set 3 (g, o, c, k)</div>
-      <div class="paper" @click="setSounds('four')">Set 4 (ck, e, u, r)</div>
+      <div class="paper" @click="setSounds('two')">Phase 2</div>
+      <div class="paper" @click="setSounds('three')">Phase 3</div>
+      <div class="paper" @click="setSounds('five')">Phase 5</div>
     </div>
     <p class="intro">Click on a sound to see the word and picture.</p>
 
@@ -20,7 +19,7 @@
 
 
 <script>
-import { sounds } from "../data/flashPhase2.js";
+import { phase } from "../data/flash.js";
 import Card from "./Card.vue";
 
 export default {
@@ -28,13 +27,13 @@ export default {
   props: {},
   data() {
     return {
-      soundsA: sounds.one
+      soundsA: phase.two
     };
   },
 
   methods: {
     setSounds(a) {
-      this.soundsA = sounds[a];
+      this.soundsA = phase[a];
     }
   },
   components: {

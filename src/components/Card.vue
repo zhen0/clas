@@ -78,7 +78,7 @@ export default {
   #card {
     background-color: white;
     border: orange;
-    margin: 5px;
+    margin: 2px;
     width: 100px;
     height: 150px;
     border-radius: 5px;
@@ -86,8 +86,8 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
     font-family: "Patrick Hand", "Comic Sans MS";
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
     flex: 1 1 auto;
@@ -99,9 +99,9 @@ export default {
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 30px;
+    font-size: 25px;
     box-sizing: border-box;
-    width: 90%;
+    width: 92%;
     height: 30%;
     border: solid orange 5px;
     padding: 2%;
@@ -113,13 +113,13 @@ export default {
 
   #sound {
     color: red;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 
   #symbolImg {
     box-sizing: border-box;
-    width: 90%;
+    width: 92%;
     height: 50%;
     border: solid orange 5px;
     padding: 2%;
