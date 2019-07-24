@@ -5,8 +5,8 @@
     <h1 class="title">Sentence Actvity</h1>
     <p class="intro">Look at the cards below and think what sentences you could make.</p>
 
-    <draggable id="container" :list="storeState.wordCards" group="words">
-      <div v-for="card in storeState.wordCards" v-bind:key="card.id" id="card">
+    <draggable id="container" :list="words" group="words">
+      <div v-for="card in words" v-bind:key="card.id" id="card">
         <SentenceCard :card="card" />
       </div>
     </draggable>
@@ -23,7 +23,7 @@
 
 
 <script>
-import { store } from "../store.js";
+import { words1 } from "../data/sentenceActPhase2.js";
 import draggable from "vuedraggable";
 import SentenceCard from "./SentenceCards.vue";
 
@@ -32,14 +32,11 @@ export default {
   props: {},
   data() {
     return {
-      storeState: store.state,
+      words: words1,
       sentence: [{ turned: true, front: "." }]
     };
   },
 
-  created() {
-    store.shuffle();
-  },
   methods: {},
   components: {
     SentenceCard,
