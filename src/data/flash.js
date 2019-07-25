@@ -128,6 +128,65 @@ export const phase = {
       sound: "r",
       front: "r",
       turned: true
+    },
+    {
+      id: 17,
+      word: "at",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/hat.png",
+      sound: "h",
+      front: "h",
+      turned: true
+    },
+    {
+      id: 18,
+      word: "ag",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/bag.png",
+      sound: "b",
+      front: "b",
+      turned: true
+    },
+    {
+      id: 19,
+      word: "inger",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/finger.png",
+      sound: "f",
+      front: "f",
+      turned: true
+    },
+    {
+      id: 20,
+      word: "cli",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/cliff.png",
+      sound: "ff",
+      front: "ff",
+      turned: true,
+      end: true
+    },
+    {
+      id: 21,
+      word: "eg",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/leg.png",
+      sound: "l",
+      front: "l",
+      turned: true
+    },
+    {
+      id: 22,
+      word: "ba",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/ball.png",
+      sound: "ll",
+      front: "ll",
+      turned: true,
+      end: true
+    },
+    {
+      id: 23,
+      word: "gra",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/grass.png",
+      sound: "ss",
+      front: "ss",
+      turned: true,
+      end: true
     }
   ]
 };
