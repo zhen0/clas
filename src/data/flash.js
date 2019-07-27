@@ -777,11 +777,11 @@ export const phase = {
     },
     {
       id: 34,
-      word1: "b",
-      word2: "cycle",
+      word1: "bic",
+      word2: "cle",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/bicycle.png",
-      sound: "i",
-      front: "i",
+      sound: "y",
+      front: "y",
       turned: true,
       mid1: true
     },
@@ -857,10 +857,10 @@ export const phase = {
     },
     {
       id: 42,
-      word: "cat",
+      word: "ca",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/catch.png",
-      sound: "ch",
-      front: "ch",
+      sound: "tch",
+      front: "tch",
       turned: true,
       end: true
     },
@@ -915,30 +915,30 @@ export const phase = {
     {
       id: 48,
       word1: "ca",
-      word2: "tle",
+      word2: "le",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/castle.png",
-      sound: "s",
-      front: "s",
+      sound: "st",
+      front: "st",
       turned: true,
       mid1: true
     },
     {
       id: 49,
       word1: "mou",
-      word2: "e",
+      sound: "se",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/mouse.png",
-      sound: "s",
-      front: "s",
+
+      front: "se",
       turned: true,
-      mid1: true
+      end: true
     },
     {
       id: 50,
-      word1: "n",
-      word2: "se",
+      word1: "noi",
+      word2: "e",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/noise.png",
-      sound: "oi",
-      front: "oi",
+      sound: "s",
+      front: "s",
       turned: true,
       mid1: true
     },
@@ -965,11 +965,11 @@ export const phase = {
     },
     {
       id: 53,
-      word1: "pyram",
-      word2: "d",
+      word1: "p",
+      word2: "ramid",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/pyramid.png",
-      sound: "i",
-      front: "i",
+      sound: "y",
+      front: "y",
       turned: true,
       mid1: true
     },
@@ -1016,23 +1016,23 @@ export const phase = {
     },
     {
       id: 58,
-      word1: "wh",
-      word2: "e",
+      word: "wh",
+      sound: "ere",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/where.png",
-      sound: "er",
-      front: "er",
+
+      front: "ere",
       turned: true,
-      mid1: true
+      end: true
     },
     {
       id: 59,
-      word1: "b",
-      word2: "r",
+      word: "b",
+
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/bear.png",
-      sound: "ea",
-      front: "ea",
+      sound: "ear",
+      front: "ear",
       turned: true,
-      mid1: true
+      end: true
     },
 
     /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1067,10 +1067,10 @@ export const phase = {
     {
       id: 63,
       word1: "n",
-      word2: "ghty",
+      word2: "ty",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/naughty.png",
-      sound: "au",
-      front: "au",
+      sound: "augh",
+      front: "augh",
       turned: true,
       mid1: true
     },
@@ -1097,10 +1097,10 @@ export const phase = {
     {
       id: 66,
       word1: "w",
-      word2: "ld",
+      word2: "d",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/would.png",
-      sound: "ou",
-      front: "ou",
+      sound: "oul",
+      front: "oul",
       turned: true,
       mid1: true
     },
