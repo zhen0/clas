@@ -1,7 +1,7 @@
 
 
 <template>
-  <div>
+  <div v-if="storeState.logged">
     <h1 class="title">Sentence Actvity</h1>
     <p class="intro">Look at the cards below and think what sentences you could make.</p>
 
@@ -26,6 +26,7 @@
 import { words1 } from "../data/sentenceActPhase2.js";
 import draggable from "vuedraggable";
 import SentenceCard from "./SentenceCards.vue";
+import { store } from "../store";
 
 export default {
   name: "Drag",
@@ -33,7 +34,8 @@ export default {
   data() {
     return {
       words: words1,
-      sentence: [{ turned: true, front: "." }]
+      sentence: [{ turned: true, front: "." }],
+      storeState: store.state
     };
   },
 

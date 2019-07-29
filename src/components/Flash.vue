@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="storeState.logged">
     <h1 class="title">Flash Cards</h1>
     <h3 class="title">Which set of flash cards do you want?</h3>
     <div id="container">
@@ -21,13 +21,15 @@
 <script>
 import { phase } from "../data/flash.js";
 import Card from "./Card.vue";
+import { store } from "../store";
 
 export default {
   name: "Memory",
   props: {},
   data() {
     return {
-      soundsA: phase.two
+      soundsA: phase.two,
+      storeState: store.state
     };
   },
 

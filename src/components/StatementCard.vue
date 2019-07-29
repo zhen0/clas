@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="storeState.logged">
     <div v-if="card.turned" @click="turn" id="card"></div>
     <div v-else @click="turn" id="card">
       <p id="sound">{{card.front}}</p>

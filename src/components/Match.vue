@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="storeState.logged">
     <h1 class="title">Statement Picture Match</h1>
     <p class="intro">Click on a card and read the statement.</p>
 
@@ -38,7 +38,8 @@ export default {
     return {
       pictures: pics1,
       statements: stats1,
-      message: ""
+      message: "",
+      storeState: store.state
     };
   },
 

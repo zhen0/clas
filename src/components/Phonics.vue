@@ -2,7 +2,7 @@
 
 <template>
   <div id="container">
-    <div id="navBar">
+    <div v-if="storeState.logged" id="navBar">
       <h1 class="title">Phonics For Life</h1>
       <p class="intro">Choose An Activity:</p>
 
@@ -13,6 +13,13 @@
       <router-link to="/match" class="intro">Statement /Picture Match</router-link>
     </div>
     <router-view></router-view>
+
+    <div v-if="!storeState.logged">
+      <h2>Please enter the password.</h2>
+      <input v-model="message" placeholder="enter" />
+      <p>You entered: {{ this.message }}</p>
+      <button @click="checkPassword(message)">Enter</button>
+    </div>
   </div>
 </template>
 
@@ -26,11 +33,19 @@ export default {
   props: {},
   data() {
     return {
-      storeState: store.state
+      storeState: store.state,
+      message: ""
     };
   },
 
-  methods: {},
+  methods: {
+    checkPassword() {
+      console.log(this.message);
+      this.message === "123Abc"
+        ? (this.storeState.logged = true)
+        : (this.storeState.logged = false);
+    }
+  },
   components: {}
 };
 </script>
