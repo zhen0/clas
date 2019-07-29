@@ -6,7 +6,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/snail.png",
       sound: "s",
       front: "s",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/s.m4a"
     },
     {
       id: 2,
@@ -14,7 +15,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/apple.png",
       sound: "a",
       front: "a",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/a.m4a"
     },
     {
       id: 3,
@@ -22,7 +24,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/tiger.png",
       sound: "t",
       front: "t",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/t.m4a"
     },
     {
       id: 4,
@@ -30,7 +33,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/plate.png",
       sound: "p",
       front: "p",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/p.m4a"
     },
     {
       id: 5,
@@ -38,7 +42,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/igloo.png",
       sound: "i",
       front: "i",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/i.m4a"
     },
     {
       id: 6,
@@ -46,7 +51,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/net.png",
       sound: "n",
       front: "n",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/n.m4a"
     },
     {
       id: 7,
@@ -54,7 +60,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/mouse.png",
       sound: "m",
       front: "m",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/m.m4a"
     },
     {
       id: 8,
@@ -62,7 +69,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set2/dog.png",
       sound: "d",
       front: "d",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/d.m4a"
     },
     {
       id: 9,
@@ -70,7 +78,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/gate.png",
       sound: "g",
       front: "g",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/g.m4a"
     },
     {
       id: 10,
@@ -78,7 +87,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/orange.png",
       sound: "o",
       front: "o",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/o.m4a"
     },
     {
       id: 11,
@@ -86,7 +96,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/cat.png",
       sound: "c",
       front: "c",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/c.m4a"
     },
     {
       id: 12,
@@ -94,7 +105,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/key.png",
       sound: "k",
       front: "k",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/k.m4a"
     },
     {
       id: 13,
@@ -103,7 +115,8 @@ export const phase = {
       sound: "ck",
       front: "ck",
       turned: true,
-      end: true
+      end: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ck.m4a"
     },
     {
       id: 14,
@@ -111,7 +124,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/elephant.png",
       sound: "e",
       front: "e",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/e.m4a"
     },
     {
       id: 15,
@@ -119,7 +133,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/umbrella.png",
       sound: "u",
       front: "u",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/u.m4a"
     },
     {
       id: 16,
@@ -127,7 +142,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/rabbit.png",
       sound: "r",
       front: "r",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/r.m4a"
     },
     {
       id: 17,
@@ -135,7 +151,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/hat.png",
       sound: "h",
       front: "h",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/h.m4a"
     },
     {
       id: 18,
@@ -143,7 +160,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/bag.png",
       sound: "b",
       front: "b",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/b.m4a"
     },
     {
       id: 19,
@@ -151,7 +169,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/finger.png",
       sound: "f",
       front: "f",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/f.m4a"
     },
     {
       id: 20,
@@ -160,7 +179,8 @@ export const phase = {
       sound: "ff",
       front: "ff",
       turned: true,
-      end: true
+      end: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ff.m4a"
     },
     {
       id: 21,
@@ -168,7 +188,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/leg.png",
       sound: "l",
       front: "l",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/l.m4a"
     },
     {
       id: 22,
@@ -177,7 +198,8 @@ export const phase = {
       sound: "ll",
       front: "ll",
       turned: true,
-      end: true
+      end: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ll.m4a"
     },
     {
       id: 23,
@@ -186,7 +208,8 @@ export const phase = {
       sound: "ss",
       front: "ss",
       turned: true,
-      end: true
+      end: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ss.m4a"
     }
   ],
   three: [
@@ -196,7 +219,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase3/volcano.png",
       sound: "v",
       front: "v",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/v.m4a"
     },
     {
       id: 2,
@@ -204,7 +228,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase3/watch.png",
       sound: "w",
       front: "w",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/w.m4a"
     },
     {
       id: 3,
@@ -213,7 +238,8 @@ export const phase = {
       sound: "x",
       front: "x",
       turned: true,
-      end: true
+      end: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/x.m4a"
     },
     {
       id: 4,
@@ -221,7 +247,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase3/yellow.png",
       sound: "y",
       front: "y",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/y.m4a"
     },
     {
       id: 5,
@@ -229,7 +256,8 @@ export const phase = {
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase3/zip.png",
       sound: "z",
       front: "z",
-      turned: true
+      turned: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/z.m4a"
     },
     {
       id: 6,
@@ -239,7 +267,8 @@ export const phase = {
       sound: "zz",
       front: "zz",
       turned: true,
-      mid1: true
+      mid1: true,
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/zz.m4a"
     },
     {
       id: 7,

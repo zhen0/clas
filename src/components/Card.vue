@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <div v-if="card.turned" @click="turn" id="card">
+    <div v-if="card.turned" @click="turnPlay(card.play)" id="card">
       <h1 id="letter">{{card.front}}</h1>
     </div>
     <div v-else-if="card.end" @click="turn" id="card">
@@ -65,6 +65,13 @@ export default {
   methods: {
     turn() {
       this.card.turned = !this.card.turned;
+    },
+    turnPlay(sound) {
+      {
+        this.card.turned = !this.card.turned;
+        const audio = new Audio(sound);
+        audio.play();
+      }
     }
   }
 };
