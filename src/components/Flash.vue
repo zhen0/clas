@@ -6,6 +6,7 @@
       <div class="paper" @click="setSounds('two')">Phase 2</div>
       <div class="paper" @click="setSounds('three')">Phase 3</div>
       <div class="paper" @click="setSounds('five')">Phase 5</div>
+      <div class="paper" @click="setSounds('alt')">Alternatives</div>
     </div>
     <p class="intro">Click on a sound to see the word and picture.</p>
 

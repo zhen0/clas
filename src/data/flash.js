@@ -873,7 +873,9 @@ export const phase = {
       front: "ey",
       turned: true,
       end: true
-    },
+    }
+  ],
+  alt: [
     {
       id: 41,
       word1: "punc",
