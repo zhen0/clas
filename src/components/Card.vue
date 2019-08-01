@@ -44,9 +44,9 @@
           <p id="sound">{{card.sound2}}</p>
           <p>{{card.word2}}</p>
         </div>
-      </div>
-      <div id="playWord">
-        <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+        <div id="playWord">
+          <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+        </div>
       </div>
       <img id="symbolImg" :src="card.imgUrl" @click="turn" />
     </div>
@@ -120,7 +120,7 @@ i {
   display: flex;
   flex-direction: row;
   align-self: center;
-  flex: 1;
+  flex: 2;
 }
 #playWord {
   flex: 1;
@@ -151,7 +151,7 @@ i {
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 80px;
+    font-size: 60px;
     box-sizing: border-box;
     width: 92%;
     height: 30%;
@@ -165,7 +165,7 @@ i {
 
   #sound {
     color: red;
-    font-size: 80px;
+
     font-family: "Patrick Hand", Comic Sans MS;
   }
 
@@ -209,7 +209,7 @@ i {
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 100px;
+    font-size: 80px;
     box-sizing: border-box;
     width: 90%;
     height: 30%;
@@ -263,7 +263,7 @@ i {
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 150px;
+    font-size: 120px;
     box-sizing: border-box;
     width: 90%;
     height: 30%;
@@ -277,7 +277,7 @@ i {
 
   #sound {
     color: red;
-    font-size: 150px;
+    font-size: 120px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 
