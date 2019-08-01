@@ -18,7 +18,9 @@ export const phase = {
       sound: "a",
       front: "a",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/a.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/a.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/a+apple.m4a"
     },
     {
       id: 3,

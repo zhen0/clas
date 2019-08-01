@@ -11,7 +11,7 @@
     <div v-else-if="card.end" id="card">
       <div id="word">
         <div id="playWord" />
-        <div id="innerWord">
+        <div id="innerWord" @click="turn">
           <p>{{card.word}}</p>
           <p id="sound">{{card.sound}}</p>
         </div>
@@ -23,7 +23,7 @@
     <div v-else-if="card.mid1" id="card">
       <div id="word">
         <div id="playWord" />
-        <div id="innerWord">
+        <div id="innerWord" @click="turn">
           <p>{{card.word1}}</p>
           <p id="sound">{{card.sound}}</p>
           <p>{{card.word2}}</p>
@@ -38,7 +38,7 @@
     <div v-else-if="card.mid2" id="card">
       <div id="word">
         <div id="playWord" />
-        <div id="innerWord">
+        <div id="innerWord" @click="turn">
           <p id="sound">{{card.sound1}}</p>
           <p>{{card.word1}}</p>
           <p id="sound">{{card.sound2}}</p>
@@ -53,23 +53,23 @@
     <div v-else-if="card.mid3" id="card">
       <div id="word">
         <div id="playWord" />
-        <div id="innerWord">
+        <div id="innerWord" @click="turn">
           <p>{{card.word1}}</p>
           <p id="sound">{{card.sound1}}</p>
 
           <p>{{card.word2}}</p>
           <p id="sound">{{card.sound2}}</p>
         </div>
-      </div>
-      <div id="playWord">
-        <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+        <div id="playWord">
+          <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+        </div>
       </div>
       <img id="symbolImg" :src="card.imgUrl" @click="turn" />
     </div>
     <div v-else id="card">
       <div id="word">
         <div id="playWord" />
-        <div id="innerWord">
+        <div id="innerWord" @click="turn">
           <p id="sound">{{card.sound}}</p>
           <p>{{card.word}}</p>
         </div>
