@@ -2,8 +2,11 @@
 
 <template>
   <div>
-    <div v-if="card.turned" @click="turnPlay(card.play)" id="card">
-      <h1 id="letter">{{card.front}}</h1>
+    <div v-if="card.turned" id="card">
+      <div @click="turn">
+        <h1 id="letter">{{card.front}}</h1>
+      </div>
+      <i class="fas fa-volume-up" @click="soundPlay(card.play)"></i>
     </div>
     <div v-else-if="card.end" @click="turn" id="card">
       <div id="word">
@@ -66,9 +69,8 @@ export default {
     turn() {
       this.card.turned = !this.card.turned;
     },
-    turnPlay(sound) {
+    soundPlay(sound) {
       {
-        this.card.turned = !this.card.turned;
         const audio = new Audio(sound);
         audio.play();
       }
@@ -80,7 +82,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap");
-
+i {
+  font-size: 50px;
+  margin: 20px;
+}
 @media screen and (max-width: 600px) {
   #card {
     background-color: white;
@@ -102,7 +107,7 @@ export default {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 200px;
+    font-size: 150px;
   }
   #word {
     display: flex;
@@ -153,9 +158,14 @@ export default {
     box-shadow: 10px 10px 10px rgb(46, 46, 46);
     flex: 1 1 auto;
   }
+  #button {
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 100px;
+  }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
     font-size: 250px;
+    margin: 0px;
   }
   #word {
     display: flex;
