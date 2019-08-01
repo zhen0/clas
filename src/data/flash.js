@@ -7,7 +7,9 @@ export const phase = {
       sound: "s",
       front: "s",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/s.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/s.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/s+snail.m4a"
     },
     {
       id: 2,
@@ -955,7 +957,7 @@ export const phase = {
     },
     {
       id: 49,
-      word1: "mou",
+      word: "mou",
       sound: "se",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/mouse.png",
 
@@ -1037,7 +1039,7 @@ export const phase = {
     {
       id: 57,
       word1: "p",
-      word2: "m tree",
+      word2: "mtree",
       imgUrl:
         "https://claspics.s3.eu-west-2.amazonaws.com/Phase5/palm+tree.png",
       sound: "al",

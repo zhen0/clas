@@ -8,46 +8,76 @@
       </div>
       <i class="fas fa-volume-up" @click="soundPlay(card.play)"></i>
     </div>
-    <div v-else-if="card.end" @click="turn" id="card">
+    <div v-else-if="card.end" id="card">
       <div id="word">
-        <p>{{card.word}}</p>
-        <p id="sound">{{card.sound}}</p>
+        <div id="playWord" />
+        <div id="innerWord">
+          <p>{{card.word}}</p>
+          <p id="sound">{{card.sound}}</p>
+        </div>
+        <div id="playWord"></div>
+        <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
       </div>
-      <img id="symbolImg" :src="card.imgUrl" />
+      <img id="symbolImg" :src="card.imgUrl" @click="turn" />
     </div>
-    <div v-else-if="card.mid1" @click="turn" id="card">
+    <div v-else-if="card.mid1" id="card">
       <div id="word">
-        <p>{{card.word1}}</p>
-        <p id="sound">{{card.sound}}</p>
-        <p>{{card.word2}}</p>
-      </div>
-      <img id="symbolImg" :src="card.imgUrl" />
-    </div>
-    <div v-else-if="card.mid2" @click="turn" id="card">
-      <div id="word">
-        <p id="sound">{{card.sound1}}</p>
-        <p>{{card.word1}}</p>
-        <p id="sound">{{card.sound2}}</p>
-        <p>{{card.word2}}</p>
-      </div>
-      <img id="symbolImg" :src="card.imgUrl" />
-    </div>
-    <div v-else-if="card.mid3" @click="turn" id="card">
-      <div id="word">
-        <p>{{card.word1}}</p>
-        <p id="sound">{{card.sound1}}</p>
+        <div id="playWord" />
+        <div id="innerWord">
+          <p>{{card.word1}}</p>
+          <p id="sound">{{card.sound}}</p>
+          <p>{{card.word2}}</p>
+        </div>
 
-        <p>{{card.word2}}</p>
-        <p id="sound">{{card.sound2}}</p>
+        <div id="playWord">
+          <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+        </div>
       </div>
-      <img id="symbolImg" :src="card.imgUrl" />
+      <img id="symbolImg" :src="card.imgUrl" @click="turn" />
     </div>
-    <div v-else @click="turn" id="card">
+    <div v-else-if="card.mid2" id="card">
       <div id="word">
-        <p id="sound">{{card.sound}}</p>
-        <p>{{card.word}}</p>
+        <div id="playWord" />
+        <div id="innerWord">
+          <p id="sound">{{card.sound1}}</p>
+          <p>{{card.word1}}</p>
+          <p id="sound">{{card.sound2}}</p>
+          <p>{{card.word2}}</p>
+        </div>
       </div>
-      <img id="symbolImg" :src="card.imgUrl" />
+      <div id="playWord">
+        <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" @click="turn" />
+    </div>
+    <div v-else-if="card.mid3" id="card">
+      <div id="word">
+        <div id="playWord" />
+        <div id="innerWord">
+          <p>{{card.word1}}</p>
+          <p id="sound">{{card.sound1}}</p>
+
+          <p>{{card.word2}}</p>
+          <p id="sound">{{card.sound2}}</p>
+        </div>
+      </div>
+      <div id="playWord">
+        <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" @click="turn" />
+    </div>
+    <div v-else id="card">
+      <div id="word">
+        <div id="playWord" />
+        <div id="innerWord">
+          <p id="sound">{{card.sound}}</p>
+          <p>{{card.word}}</p>
+        </div>
+        <div id="playWord">
+          <i class="fas fa-volume-up" @click="soundPlay(card.play2)"></i>
+        </div>
+      </div>
+      <img id="symbolImg" :src="card.imgUrl" @click="turn" />
     </div>
   </div>
 </template>
@@ -86,6 +116,15 @@ i {
   font-size: 50px;
   margin: 20px;
 }
+#innerWord {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  flex: 1;
+}
+#playWord {
+  flex: 1;
+}
 @media screen and (max-width: 600px) {
   #card {
     background-color: white;
@@ -118,8 +157,8 @@ i {
     height: 30%;
     border: solid orange 5px;
     padding: 2%;
-    justify-content: center;
-    align-items: center;
+    justify-content: space evenly;
+
     border-bottom: 0px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
@@ -176,7 +215,7 @@ i {
     height: 30%;
     border: solid orange 5px;
     padding: 2%;
-    justify-content: center;
+    justify-content: space around;
     align-items: center;
     border-bottom: 0px;
     font-family: "Patrick Hand", Comic Sans MS;

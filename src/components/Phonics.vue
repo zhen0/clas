@@ -40,7 +40,6 @@ export default {
 
   methods: {
     checkPassword() {
-      console.log(this.message);
       this.message === "123Abc"
         ? (this.storeState.logged = true)
         : (this.storeState.logged = false);
