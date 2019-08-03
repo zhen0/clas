@@ -29,7 +29,9 @@ export const phase = {
       sound: "t",
       front: "t",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/t.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/t.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/t+tiger.m4a"
     },
     {
       id: 4,
@@ -38,7 +40,9 @@ export const phase = {
       sound: "p",
       front: "p",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/p.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/p.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/p+plate.m4a"
     },
     {
       id: 5,
@@ -47,7 +51,9 @@ export const phase = {
       sound: "i",
       front: "i",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/i.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/i.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/i+igloo.m4a"
     },
     {
       id: 6,
@@ -56,7 +62,9 @@ export const phase = {
       sound: "n",
       front: "n",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/n.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/n.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/n+net.m4a"
     },
     {
       id: 7,
@@ -65,7 +73,9 @@ export const phase = {
       sound: "m",
       front: "m",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/m.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/m.m4",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/m+mouse.m4a"
     },
     {
       id: 8,
@@ -74,146 +84,183 @@ export const phase = {
       sound: "d",
       front: "d",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/d.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/d.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/d+dog.m4a"
     },
     {
       id: 9,
       word: "ate",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/gate.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/gate.jpg",
       sound: "g",
       front: "g",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/g.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/g.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/g+gate.m4a"
     },
     {
       id: 10,
       word: "range",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/orange.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/ornge.jpg",
       sound: "o",
       front: "o",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/o.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/o.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/o+orange.m4a"
     },
     {
       id: 11,
       word: "at",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/cat.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/cat.png",
       sound: "c",
       front: "c",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/c.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/c.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/c+cat.m4a"
     },
     {
       id: 12,
       word: "ey",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set3/key.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/key.jpg",
       sound: "k",
       front: "k",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/k.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/k.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/k+key.m4a"
     },
+
     {
       id: 13,
       word: "so",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/sock.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/sock.jpg",
       sound: "ck",
       front: "ck",
       turned: true,
-      end: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ck.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ck.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/ck+sock.m4a",
+      end: true
     },
     {
       id: 14,
       word: "lephant",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/elephant.png",
+      imgUrl:
+        "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/elephant.jpg",
       sound: "e",
       front: "e",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/e.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/e.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/e+elephant.m4a"
     },
     {
       id: 15,
       word: "mbrella",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/umbrella.png",
+      imgUrl:
+        "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/umbrella.png",
       sound: "u",
       front: "u",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/u.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/u.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/u+umbrella.m4a"
     },
     {
       id: 16,
       word: "abbit",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Set4/rabbit.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/rabbit.jpg",
       sound: "r",
       front: "r",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/r.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/r.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/r+rabbit.m4a"
     },
+
     {
       id: 17,
       word: "at",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/hat.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/hat.png",
       sound: "h",
       front: "h",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/h.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/h.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/h+hat.m4a"
     },
     {
       id: 18,
       word: "ag",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/bag.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/bag.jpg",
       sound: "b",
       front: "b",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/b.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/b.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/b+bag.m4a"
     },
     {
       id: 19,
       word: "inger",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/finger.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/finger.jpg",
       sound: "f",
       front: "f",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/f.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/f.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/f+finger.m4a"
     },
     {
       id: 20,
       word: "cli",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/cliff.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/cliff.jpg",
       sound: "ff",
       front: "ff",
       turned: true,
-      end: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ff.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ff.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/ff+cliff.m4a",
+      end: true
     },
+
     {
       id: 21,
       word: "eg",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/leg.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/leg.png",
       sound: "l",
       front: "l",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/l.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/l.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/l+leg.m4a"
     },
     {
       id: 22,
       word: "ba",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/ball.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/ball.jpg",
       sound: "ll",
       front: "ll",
       turned: true,
-      end: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ll.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ll.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/ll+ball.m4a",
+      end: true
     },
     {
       id: 23,
       word: "gra",
-      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/Phase2/grass.png",
+      imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP2/grass.png",
       sound: "ss",
       front: "ss",
       turned: true,
-      end: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ss.m4a"
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/ss.m4a",
+      play2:
+        "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/ss+grass.m4a",
+      end: true
     }
   ],
   three: [
