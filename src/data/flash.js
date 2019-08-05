@@ -935,7 +935,7 @@ export const phase = {
       sound: "u",
       front: "u",
       turned: true,
-      end: true,
+
       play:
         "https://soundrecordingsphase5.s3.eu-west-2.amazonaws.com/u+unicorn.m4a",
       play2:
@@ -1268,7 +1268,7 @@ export const phase = {
     },
     {
       id: 49,
-      word1: "mou",
+      word: "mou",
       imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/FlashP5/mouse.png",
       sound: "se",
       front: "se",
