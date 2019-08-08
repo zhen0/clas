@@ -73,7 +73,7 @@ export const phase = {
       sound: "m",
       front: "m",
       turned: true,
-      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/m.m4",
+      play: "https://soundrecordingsphase2.s3.eu-west-2.amazonaws.com/m.m4a",
       play2:
         "https://soundrecordingswordsphase2.s3.eu-west-2.amazonaws.com/m+mouse.m4a"
     },

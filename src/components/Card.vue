@@ -203,7 +203,7 @@ i {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 250px;
+    font-size: 200px;
     margin: 0px;
   }
   #word {
@@ -243,8 +243,8 @@ i {
     background-color: white;
     border: orange;
     margin: 5px;
-    width: 500px;
-    height: 800px;
+    width: 250px;
+    height: 400px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -258,12 +258,12 @@ i {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 300px;
+    font-size: 150px;
   }
   #word {
     display: flex;
     flex-direction: row;
-    font-size: 120px;
+    font-size: 60px;
     box-sizing: border-box;
     width: 90%;
     height: 30%;
@@ -277,7 +277,7 @@ i {
 
   #sound {
     color: red;
-    font-size: 120px;
+    font-size: 60px;
     font-family: "Patrick Hand", Comic Sans MS;
   }
 

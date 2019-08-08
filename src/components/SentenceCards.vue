@@ -42,23 +42,38 @@ export default {
 @media screen and (max-width: 600px) {
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   #blue {
     color: blue;
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 20px;
+    font-size: 15px;
+  }
+  #brown {
+    color: brown;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 15px;
+  }
+  #yellow {
+    color: yellow;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 15px;
   }
   #red {
     color: red;
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 20px;
+    font-size: 15px;
   }
   #grey {
     color: grey;
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 20px;
+    font-size: 15px;
+  }
+  #green {
+    color: green;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 15px;
   }
   #orange {
     color: orange;
@@ -76,23 +91,38 @@ export default {
 @media screen and (min-width: 600px) and (max-width: 1500px) {
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 35px;
   }
 
   #blue {
     color: blue;
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 35px;
   }
   #red {
     color: red;
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 35px;
+  }
+  #brown {
+    color: brown;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 35px;
+  }
+  #yellow {
+    color: yellow;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 35px;
   }
   #grey {
     color: grey;
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 50px;
+    font-size: 35px;
+  }
+  #green {
+    color: green;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 35px;
   }
   #orange {
     color: orange;
@@ -125,6 +155,11 @@ export default {
   }
   #grey {
     color: grey;
+    font-family: "Patrick Hand", Comic Sans MS;
+    font-size: 100px;
+  }
+  #green {
+    color: green;
     font-family: "Patrick Hand", Comic Sans MS;
     font-size: 100px;
   }
