@@ -8,6 +8,7 @@ export const senAct3 = {
         imgUrl: "https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/rain.jpg",
         sound: "ai",
         front: "rain",
+        color: "red",
         turned: true,
         mid1: true
       },
@@ -20,6 +21,7 @@ export const senAct3 = {
         sound: "ai",
         front: "train",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -30,6 +32,7 @@ export const senAct3 = {
           "https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/snail.jpg",
         sound: "ai",
         front: "snail",
+        color: "red",
         turned: true,
         mid1: true
       },
@@ -100,6 +103,7 @@ export const senAct3 = {
         sound: "air",
         front: "chair",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -110,6 +114,7 @@ export const senAct3 = {
         sound: "air",
         front: "hair",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -121,6 +126,7 @@ export const senAct3 = {
         sound: "air",
         front: "stairs",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -130,6 +136,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/eclair.png ",
         sound: "air",
         front: "eclair",
+        color: "red",
         turned: true
       },
       {
@@ -199,6 +206,7 @@ export const senAct3 = {
         sound: "ar",
         front: "star",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -209,6 +217,7 @@ export const senAct3 = {
         sound: "ar",
         front: "car",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -220,6 +229,7 @@ export const senAct3 = {
         sound: "ar",
         front: "shark",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -229,6 +239,7 @@ export const senAct3 = {
         sound: "ar",
         front: "jar",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -327,6 +338,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/chips.jpg ",
         sound: "ch",
         front: "chips",
+        color: "red",
         turned: true
       },
       {
@@ -336,6 +348,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/chicken.jpg",
         sound: "ch",
         front: "chicken",
+        color: "red",
         turned: true
       },
       {
@@ -345,6 +358,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/chocolate.jpg",
         sound: "ch",
         front: "chocolate",
+        color: "red",
         turned: true
       },
       {
@@ -354,6 +368,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/chilli.jpg",
         sound: "ch",
         front: "chilli",
+        color: "red",
         turned: true
       },
       {
@@ -424,6 +439,7 @@ export const senAct3 = {
         sound: "ear",
         front: "beard",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -433,6 +449,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/ears.jpg",
         sound: "ear",
         front: "ears",
+        color: "red",
         turned: true
       },
       {
@@ -442,6 +459,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/tear.jpg",
         sound: "ear",
         front: "tear",
+        color: "red",
         turned: true,
         end: true
       },
@@ -519,6 +537,7 @@ export const senAct3 = {
         sound: "ee",
         front: "teeth",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -530,6 +549,7 @@ export const senAct3 = {
         sound: "ee",
         front: "cheese",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -541,6 +561,7 @@ export const senAct3 = {
         sound: "ee",
         front: "feet",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -552,6 +573,7 @@ export const senAct3 = {
         sound: "ee",
         front: "sheep",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -637,6 +659,7 @@ export const senAct3 = {
         sound: "er",
         front: "fern",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -648,6 +671,7 @@ export const senAct3 = {
         sound: "er",
         front: "perfume",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -659,6 +683,7 @@ export const senAct3 = {
         sound: "er",
         front: "person",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -670,6 +695,7 @@ export const senAct3 = {
         sound: "er",
         front: "mermaid",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -760,6 +786,7 @@ export const senAct3 = {
         sound: "igh",
         front: "knights",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -771,6 +798,7 @@ export const senAct3 = {
         sound: "igh",
         front: "fight",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -782,6 +810,7 @@ export const senAct3 = {
         sound: "igh",
         front: "light",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -793,6 +822,7 @@ export const senAct3 = {
         sound: "igh",
         front: "night",
         turned: true,
+        color: "red",
         mid1: true
       },
       {
@@ -870,6 +900,7 @@ export const senAct3 = {
         imgUrl: " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/jet.jpg",
         sound: "j",
         front: "jet",
+        color: "red",
         turned: true
       },
       {
@@ -879,6 +910,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/jeep.png",
         sound: "j",
         front: "jeep",
+        color: "red",
         turned: true
       },
       {
@@ -888,6 +920,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/jaguar.jpg",
         sound: "j",
         front: "jaguar",
+        color: "red",
         turned: true
       },
       {
@@ -962,6 +995,7 @@ export const senAct3 = {
         sound: "ng",
         front: "ring",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -971,6 +1005,7 @@ export const senAct3 = {
           " https://claspics.s3.eu-west-2.amazonaws.com/SenActP3/king.png ",
         sound: "ng",
         front: "king",
+        color: "red",
         turned: true,
         end: true
       },
@@ -982,6 +1017,7 @@ export const senAct3 = {
         sound: "ng",
         front: "wing",
         turned: true,
+        color: "red",
         end: true
       },
       {
@@ -992,6 +1028,7 @@ export const senAct3 = {
         sound: "ng",
         front: "fang",
         turned: true,
+        color: "red",
         end: true
       },
       {
