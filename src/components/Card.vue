@@ -184,7 +184,7 @@ i {
     background-color: white;
     border: orange;
     margin: 25px;
-    width: 700px;
+    width: 400px;
     height: 550px;
     border-radius: 5px;
     display: flex;
@@ -243,8 +243,8 @@ i {
     background-color: white;
     border: orange;
     margin: 5px;
-    width: 250px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -258,7 +258,8 @@ i {
   }
   #letter {
     font-family: "Patrick Hand", Comic Sans MS;
-    font-size: 150px;
+    font-size: 200px;
+    margin: 0px;
   }
   #word {
     display: flex;
